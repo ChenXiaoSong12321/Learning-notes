@@ -1,0 +1,2 @@
+https与http
+https协议是基于SSL/TLS之上的http协议，所有的数据都是在SSL/TLS的封装之上传输的。也就是说，HTTPS协议是在HTTP协议的基础之上添加了SSL/TLS握手以及数据加密传输。简单来说，在nodejs里面，HTTPS就是专门用来处理加密访问的。同事HTTP和HTTPS在这两个模块的API和使用方式几乎是一样的，也就是使用的时候，在搭建HTTPS服务器的时候，需要一个SSL证书。
