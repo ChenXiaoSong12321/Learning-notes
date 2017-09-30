@@ -27,6 +27,8 @@ git 命令总结
 	列出所有本地远程分支 ：git branch -a
 	新建一个分支，但保持在当前分支 ：git branch 'branch name'
 	删除分支 ：git branch -d 'branch name'
+	创建+切换分支：git checkout -b <name>
+	合并某分支到当前分支：git merge <name>
 校验：checkout
 	恢复暂存区的文件到工作区  ：git checkout 'file'
 	恢复暂存区的所有文件到工作区 ：git checkout *    
@@ -47,3 +49,5 @@ git 命令总结
 	强行提交当前分支到远程git代码库 ：git push 'remote name' -force
 帮助：help
 	帮助信息 ：git -help   
+远程仓库:
+	创建SSH Key : ssh-keygen -t rsa -C "youremail@example.com"(没有特定需求可一路回车，id_rsa(私钥)和id_rsa.pub(公钥)，将公钥粘贴到Add SSH Key的key中)
