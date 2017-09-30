@@ -1,0 +1,49 @@
+git 命令总结
+
+新建项目
+	新建一个目录，初始化为git代码库 ：git init 'project name'
+	下载一个项目到当前目录下 ：git clone 'url'
+增：add
+	添加指定文件或目录到本地暂存区 ：git add 'file'或'dir'
+	添加目录下所有文件到本地暂存区 ：git add *
+删：rm
+	从git代码库中移除文件 ：git rm 'file'
+	从git代码库中移除目录 ：git rm -r 'dir'
+改：commit
+	提交暂存区内容到git代码库 ：git commit -m 'commit message'
+	提交暂存区指定文件到git代码库 ：git commit 'file' -m 'commit message' 
+	提交工作区内容到git代码库（不需要git add）：git commit -a
+	提交一次新信息替换上一次提交（如果没有变化，改写上一次提交信息）：git commit --amend -m 'message'       
+查
+	显示有变更的文件 ：git status
+	显示暂存区和工作区的区别 ：git diff    
+	显示当前分支的历史版本信息 ：git log
+	根据关键词搜索提交历史信息 ：git log -S 'keyword'
+	显示指定文件修改详情 ：git blame 'file'
+	显示当前分支的最近几次提交 ：git reflog
+分支：branch
+	列出所有本地分支 ：git branch
+	列出所有远程分支 ：git branch -r
+	列出所有本地远程分支 ：git branch -a
+	新建一个分支，但保持在当前分支 ：git branch 'branch name'
+	删除分支 ：git branch -d 'branch name'
+校验：checkout
+	恢复暂存区的文件到工作区  ：git checkout 'file'
+	恢复暂存区的所有文件到工作区 ：git checkout *    
+	切换到上一个分支 ：git checkout -
+	新建一个分支，并切换到该分支 ：git checkout -b 'branch name'   
+合并：merge
+	将分支合并到当前分支 ：git merge 'branch name'
+标签：tag
+	列出所有标签 ：git tag
+	新建一个标签在当前提交 ：git tag 'tag name'     
+	删除本地标签 ：git tag -d 'tag name'
+远程：remote
+	显示所有远程git代码库 ：git remote -v
+	显示指定远程git代码库信息 ：git remote show 'remote name' 
+推送：push
+	提交标签到指定远程git代码库 ：git push 'remote name' 'tag name'     
+	提交分支到指定远程git代码库 ：git push 'remote name' 'branch name'
+	强行提交当前分支到远程git代码库 ：git push 'remote name' -force
+帮助：help
+	帮助信息 ：git -help   
