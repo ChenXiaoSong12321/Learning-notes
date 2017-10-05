@@ -1,0 +1,19 @@
+数据流，防爆仓处理，读取流和写入流，  写入流如果比较慢，可先暂停读取pause，等写入完成后，执行drain时，去开启resume，继续读取写入
+var fs = require('fs');
+var readStream = fs.createReadStream('../aa.js');
+var writeStream = fs.createWriteStream('../aa_1.js');
+
+readStream.on('data',function(chuck){
+	if(writeStream.write(chuck) === false){
+		readStream.pause();
+	}
+})
+
+readStream.on('end', function(){
+	writeStream.end()
+})
+
+//耗尽，结束时执行
+writeStream.on('drain',function(){
+	readStream.resume();
+})

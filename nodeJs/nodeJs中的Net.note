@@ -1,6 +1,6 @@
 nodeJs中的Net
 buffer 用来保存原始数据
-而 stream是来暂存和移动数据  
+而 stream是来暂存和移动数据   
 引用【buffer缓冲，在nodejs里处理二进制的数据。为什么要有buffer呢，因为js的字符串是以utf-8的编码存储的，处理二进制的能力是很弱的，而网络层对于不同资源、文件的请求、响应都是用二进制这种方式进行交互的，所以nodejs就有一个接口来创建存放二进制数据的缓存区，并提供一些方法来对缓存区的数据进行进一步的处理。Buffer在nodejs中是可以全局访问的，不需要require来加载。】
 
 实例化 Buffer
@@ -9,4 +9,5 @@ buffer 用来保存原始数据
 3. `new Buffer([]);`
 
 new Buffer 在Node8.0.0 被废弃  在v6前版本都使用这种方法 因为new Buffer实例的内存是没有初始化的 可能包含敏感数据 现在已用 Buffer.alloc() Buffer.allocUnsafe() Buffer.from()代替
+
 
