@@ -1,0 +1,18 @@
+var a = {} 其实是 var a = new Object() 的语法糖
+var a = [] 其实是 var a = new Array() 的语法糖
+var function Foo(){} 其实是 var Foo = new Function() 的语法糖
+使用instanceof判断一个函数是否是一个变量的构造函数
+在整个原型链上找
+变量 instanceof 构造器
+
+如何准确判断一个变量是数组类型
+var arr = []
+arr instanceof Array //true
+typeof arr //object,typeof无法判断引用类型
+
+
+new 一个对象的过程
+创建一个新对象
+this指向这个新对象
+执行代码，即对this赋值
+返回this
