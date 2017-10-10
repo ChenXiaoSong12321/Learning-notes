@@ -16,3 +16,32 @@ new 一个对象的过程
 this指向这个新对象
 执行代码，即对this赋值
 返回this
+
+function Elem(id) {
+var elem = document.querySelector('#'+id)
+	if (!elem) {
+		alert('没有传入争取的id')
+	}else{
+		this.elem = elem
+	}
+}
+Elem.prototype = {
+	html:function (val) {
+		var elem = this.elem
+		if (val) {
+			elem.innerHTML = val
+			return this
+		}else{
+			return elem.innerHTML
+		}
+	},
+	on:function(type,fn){
+		this.elem.addEventListener(type,fn)
+		return this
+	}
+}
+var f = new Elem('aaa')
+console.log(f.html())
+f.html('<h1>哈哈</h1>').on('click',function () {
+	alert('clicked')
+}).html('<h2>changed</h2>')

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<form action="">
+		<button>test preventDefault</button>
+		<div id="show" style="width: 100px;height: 100px;background: red"></div>
+	</form>
+	<script>
+		$(document).ready(function(){
+            $("button").click(function(e){
+                $("#show").fadeTo("fast",0);
+                e.preventDefault(); //取消事件的默认动作。
+            });
+ 		})
+	</script>
+</body>
+</html>

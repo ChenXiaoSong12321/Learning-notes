@@ -1,0 +1,7 @@
+indexOf()
+
+indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+[10,20,30].indexOf(10) //0
+[10,20,30].indexOf(20) //1
+'askjdfjh'.indexOf('f') //5
+'askjdfjh'.indexOf('p') //-1
