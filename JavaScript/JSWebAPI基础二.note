@@ -1,0 +1,45 @@
+事件绑定
+事件冒泡（往上）
+<body>
+	<div>
+		<p></p>
+	</div>
+</body>
+p -> div -> body
+
+function bindEvent(ele,type,fn){
+	ele.addEventListener(type,fn)
+}
+
+var div = document.querySeletor('div')
+bindEvent(div,'click',function(e){
+	e.preventDefault() // 阻止默认行为
+	alert('clicked')
+	e.stopPropatation() //阻止事件冒泡
+	var target = e.target //
+	if (target.nodeName === 'A') {
+		alert(target.innerHTML)
+	}
+})
+
+完善通用绑定事件的函数
+function bindEvent(ele,type,selector,fn){
+	if (fn == null) {
+		fn = selector
+		selector = null
+	} //兼容是否使用代理
+	ele.addEventListener(type,function(e){
+		var target
+		if (selector) {
+			target = e.target
+			if (target.matches(selector)) {
+				fn.call(target,e)
+			}
+		}else{
+			fn(e)
+		}
+	})
+}
+bindEvent(div,'click','a',function(){})
+bindEvent(a,'click',function(){})
+代理的好处，减少浏览器内存的占用
