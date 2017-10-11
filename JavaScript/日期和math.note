@@ -1,0 +1,82 @@
+Date
+
+Date.now() //获取当前时间的毫秒数
+var dt = new Date() //
+dt.getTime() //获取毫秒数
+dt.getFullYear() //年
+dt.getMonth() //月（0-11）
+dt.getDate() //日
+dt.getHours() //小时
+dt.getMinutes() //分钟
+dt.getSeconds() //秒
+dt.setTime()() //以毫秒设置 Date 对象
+dt.setDate()	//设置 Date 对象中月的某一天 (1 ~ 31)。
+dt.setMonth()	//设置 Date 对象中月份 (0 ~ 11)。
+dt.setFullYear()	//设置 Date 对象中的年份（四位数字）。
+...
+
+Math
+
+Math.random() //随机数（0-1）
+Math.abs() //绝对值
+Math.ceil() //向上取整
+Math.floor() //向下取整
+Math.round() //四舍五入
+Math.min() //最小值
+Math.max() //最大值
+...
+
+function formateDate(dt){
+	if (!dt) {
+		dt = new Date()
+	}
+	var time = [
+		dt.getFullYear(), //年
+		dt.getMonth()+1, //月（0-11）
+		dt.getDate(), //日
+		dt.getHours(), //小时
+		dt.getMinutes(), //分钟
+		dt.getSeconds() //秒
+	]
+	var formateTime = ''
+	var spe = ''
+	time.forEach(function (item,index) {
+		if (item <10) {
+			item =  '0'+item
+		}
+		switch(index){
+			case 0:
+			case 1:
+				spe = '-'
+				break
+			case 2:
+				spe = ' '
+				break
+			case 3:
+			case 4:
+				spe = ':'
+				break
+			default:
+				spe = ''
+		}
+		item += spe
+		formateTime += item 
+	})
+	return formateTime
+}
+var dt = new Date()
+console.log(formateDate(new Date()))
+
+var random = Math.random()
+random = random + '0000000000'
+random = random.slice(0,10)*10
+
+Math.floor(Math.random()*100)
+
+function getRandom(min, max){
+    var r = Math.random() * (max - min);
+    var re = Math.round(r + min);
+    re = Math.max(Math.min(re, max), min)
+     
+    return re;
+}

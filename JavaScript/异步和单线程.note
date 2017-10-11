@@ -1,11 +1,15 @@
 什么是异步？
 不阻塞程序执行
 
-合适需要异步？
+何时需要异步？
 在可能发生等待的情况
 等待过程中不能像alert一样阻塞程序运行
 因此，所有的"等待的情况"都需要异步
-定时任务：setTimeout、setInterval
-网络请求：ajax请求，动态<img>加载
-事件绑定
+1定时任务：setTimeout、setInterval
+2网络请求：ajax请求，动态<img>加载
+3事件绑定
+
+执行setTimeout后，传入setTimeout的函数会被暂存起来，不会立即执行（但形成的特点，不能同时干两件事），等待所有程序执行完，处于空闲状态时，会立马看有没有暂存起来的要执行
+类似的ajax，将ajax的error和success的函数暂存起来，什么时候数据返回什么时候解封
+addEventListener，什么时候触发什么时候解封，可执行多次
 
