@@ -1,0 +1,39 @@
+跨域
+
+什么是跨域
+浏览器有同源策略，不允许ajax访问其他域接口
+跨域条件：协议（http与https）、域名、端口，有一个不同就算跨域
+
+可以跨域的三个链接
+<img src=XXX> 场景：用于打点统计，统计网站可能是其他域
+<link href=XXX> 场景：可以使用CDN、CDN的也是其他域
+<script src=XXX> 场景：可以用于JSONP
+
+跨域注意事项
+所有的跨域请求都必须经过信息提供方允许
+如果未经允许即可获取，那是浏览器同源策略出现漏洞
+
+JSONP实现原理
+加载http://coding.m.com/classindex.html
+不一定服务器真正有一个classindex.html文件
+服务器可以根据请求，动态生成一个文件，返回
+同理于<script src="http://coding.m.imooc.com/api.js">
+
+<script>
+	window.callback = function(data){
+		 console.log(data)
+	}
+</script>
+<script src="http://coding.m.imooc.com/api.js">
+	/*以上返回callback({x:100,y:200})*/
+
+服务器端设置http header
+// 第二个参数填写允许跨域的名称，不建议直接写 * 
+response.setHeader("Access-Control-Allow-Origin","http://a.com,http://b.com");
+response.setHeader("Access-Control-Allow-Headers","X-Requested-With");
+response.setHeader("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+
+// 接收跨域的cookie
+response.setHeader("Access-Control-Allow-Credentials","true");
+
+

@@ -1,0 +1,25 @@
+存储
+
+cookie、sessionStorage、localStorage的区别
+
+cookie
+本身用于客户端和服务端通信，每次请求都会被待在http请求中
+但是它有本地存储的功能，于是就被"借用"
+使用document.cookie=...获取和修改即可
+缺点：太小，4kb
+所有http请求都带着，会影响获取资源的效率
+API简单，需要封装才能用document.cookie...
+
+localStorage和sessionStorage
+H5专门为存储而设计，5M
+API简单易用
+localStorage.setItem(key,value);
+localStorage.getItem(key,value);
+
+sessionStorage在浏览器关闭时会被清掉
+API同localStorage
+
+IOS safari隐藏模式下
+localStorage.getItem()会报错
+建议用try-catch包起来
+
