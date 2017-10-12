@@ -1,0 +1,13 @@
+ajax
+
+var xhr = new XMLHttpRequest()
+xhr.open("GET","/api",false) //第三个参数决定是否异步
+xhr.onreadystatechange = function(){
+	//这里的函数异步执行，可参考js异步模块
+	if (xhr.readyState == 4) { // 4 已经完成 
+		if (xhr.status == 200) { // 200 成功
+			alert(xhr.responseText)
+		}
+	}
+}
+xhr.send(null)

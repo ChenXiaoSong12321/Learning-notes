@@ -1,5 +1,5 @@
 事件绑定
-事件冒泡（往上）
+按照树形结构向上事件冒泡（往上）
 <body>
 	<div>
 		<p></p>
@@ -42,4 +42,4 @@ function bindEvent(ele,type,selector,fn){
 }
 bindEvent(div,'click','a',function(){})
 bindEvent(a,'click',function(){})
-代理的好处，减少浏览器内存的占用
+代理的好处，减少浏览器内存的占用，代码简洁
