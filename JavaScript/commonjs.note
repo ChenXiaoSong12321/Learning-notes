@@ -1,0 +1,33 @@
+commonjs
+
+nodejs模块化规范
+前端开发依赖和库，都可以从npm中获取
+构建工具的高度自动化，使得使用npm的成本非常低
+commonjs不会异步加载js，而是同步一次性加载出来
+
+// util.js
+module.exports = {
+	getFormatDate : function(date,type){
+		var dt = type === 1 ? '2017-10-14':type ===2?'2017年10月14日':false
+		return dt 
+	}
+}
+
+// a-util.js
+var util = require('util.js')
+module.exports = {
+	aGetFormateDate : function(){
+		return util.getFormatDate(date,2)
+	}
+}
+
+AMD和commonjs的使用场景
+AMD：需要异步加载js
+commonjs：使用了npm之后建议使用
+
+构建工具：grunt->gulp->webpack
+
+
+
+
+
