@@ -17,7 +17,7 @@ git 命令总结
 查
 	显示有变更的文件 ：git status
 	显示暂存区和工作区的区别 ：git diff    
-	显示当前分支的历史版本信息 ：git log
+	显示当前分支的历史版本信息 ：git log (--stat/--pretty=oneline)
 	根据关键词搜索提交历史信息 ：git log -S 'keyword'
 	显示指定文件修改详情 ：git blame 'file'
 	显示当前分支的最近几次提交 ：git reflog
