@@ -1,0 +1,14 @@
+建立目录 make directories
+mkdir -p 目录名
+-p 递归创建
+
+cd 切换目录 change directory
+cd ~ 进入当前用户的家目录
+cd
+cd - 进入上次目录
+cd .. 进入上一级目录
+cd . 进入当前目录
+cd / 绝对路径，从根目录
+
+pwd 查询所在目录位置
+print working directory 

@@ -24,7 +24,7 @@ ls [选项] [文件或目录]
 	-h 人性化显示文件大小
 	-i 显示inode
 
-ls -l
+ls -l === ll
 -rw-r--r--. 1 root root 24772 10月 22 22:51 install.log
 -rw-r--r--：
 -文件类型（- 文件 d 目录 l 软链接文件）
