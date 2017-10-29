@@ -1,0 +1,7 @@
+sass输出方式设定.note
+
+sass --watch test.scss:test.css --style compact
+嵌套输出方式 nested
+展开输出方式 expanded  
+紧凑输出方式 compact 
+压缩输出方式 compressed

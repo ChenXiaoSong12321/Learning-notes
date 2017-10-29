@@ -1,0 +1,5 @@
+sass 在终端调试scss代码
+
+在 Sass3.3 版本之上（我测试使用的版本是 3.4.22）：
+
+sass --watch style.scss:style.css

@@ -1,0 +1,174 @@
+sass基础.note
+
+变量：
+$brand-primary : darken(#428bca, 6.5%) !default; // #337ab7
+$btn-primary-color : #fff !default;
+$btn-primary-bg : $brand-primary !default;
+$btn-primary-border : darken($btn-primary-bg, 5%) !default;
+值后面加上!default则表示默认值。
+
+全局变量与局部变量
+//SCSS
+$color: orange !default;//定义全局变量(在选择器、函数、混合宏...的外面定义的变量为全局变量)
+.block {
+  color: $color;//调用全局变量
+}
+em {
+  $color: red;//定义局部变量
+  a {
+    color: $color;//调用局部变量
+  }
+}
+span {
+  color: $color;//调用全局变量
+}
+
+选择器嵌套
+// CSS
+nav a {
+  color:red;
+}
+
+header nav a {
+  color:green;
+}
+
+//SCSS
+nav {
+  a {
+    color: red;
+
+    header & {
+      color:green;
+    }
+  }  
+}
+&选择符置前表示该元素为嵌套元素的子级，置后表示该元素为嵌套元素的父级。
+
+嵌套-属性嵌套
+
+// CSS
+.box {
+    border-top: 1px solid red;
+    border-bottom: 1px solid green;
+}
+
+//SCSS
+.box {
+  border: {
+   top: 1px solid red;
+   bottom: 1px solid green;
+  }
+}
+
+嵌套-伪类嵌套
+//SCSS
+.clearfix{
+&:before,
+&:after {
+    content:"";
+    display: table;
+  }
+&:after {
+    clear:both;
+    overflow: hidden;
+  }
+}
+// CSS
+clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  overflow: hidden;
+}
+
+混合宏-声明混合宏
+@mixin border-radius($radius:5px){
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+混合宏-调用混合宏
+@include border-radius(10px);
+混合宏的参数--传多个参数
+@mixin center($width,$height){
+  width: $width;
+  height: $height;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -($height) / 2;
+  margin-left: -($width) / 2;
+}
+.box-center {
+  @include center(500px,300px);
+}
+混合宏的不足：并不能智能的将相同的样式代码块合并在一起。
+
+扩展/继承
+//SCSS
+.btn {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #f36;
+  color: #fff;
+  @extend .btn;
+}
+
+.btn-second {
+  background-color: orange;
+  color: #fff;
+  @extend .btn;
+}
+//CSS
+.btn, .btn-primary, .btn-second {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #f36;
+  color: #fff;
+}
+
+.btn-second {
+  background-clor: orange;
+  color: #fff;
+}
+
+占位符 %placeholder
+//SCSS
+%mt5 {
+  margin-top: 5px;
+}
+%pt5{
+  padding-top: 5px;
+}
+
+.btn {
+  @extend %mt5;
+  @extend %pt5;
+}
+
+.block {
+  @extend %mt5;
+
+  span {
+    @extend %pt5;
+  }
+}
+//CSS
+.btn, .block {
+  margin-top: 5px;
+}
+
+.btn, .block span {
+  padding-top: 5px;
+}
+
