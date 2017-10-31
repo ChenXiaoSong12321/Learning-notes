@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas-draw</title>
+</head>
+<body>
+	<canvas id="canvas" style="display: block;margin: 50px auto;border: 2px solid black;">
+		您的浏览器不支持canvas，请更换浏览器再试
+	</canvas>
+
+	<script>
+
+		const canvas = document.getElementById('canvas');
+		const ctx = canvas.getContext('2d');
+		var color=["#ffff00","#ffff33","#ffff66","#ffff99","#ffffcc","#ffffff","#ffcc00","#ffcc33","#ffcc66","#ffcc99"];
+
+		window.onload=function () {
+
+			canvas.width = 1100;
+			canvas.height = 500;
+
+			setInterval(function () {
+				updateStar();
+				
+			},1000)
+		}
+
+		function drawStar( r, R, x, y, rot, fillColor, lineColor, lineWidth, ctx) {
+
+			// ctx.clearRect(0,0,canvas.width,canvas.height);
+			
+			ctx.beginPath();
+
+			for (var i = 0; i < 5; i++) {
+					ctx.lineTo( Math.cos((18+72*i+rot)/180*Math.PI)*R+x,-Math.sin((18+72*i+rot)/180*Math.PI)*R+y)
+					ctx.lineTo( Math.cos((54+72*i+rot)/180*Math.PI)*r+x,-Math.sin((54+72*i+rot)/180*Math.PI)*r+y)
+				}
+
+			ctx.lineWidth = lineWidth;
+			ctx.fillStyle = fillColor;
+			ctx.strokeStyle = lineColor;
+
+			ctx.closePath();
+			ctx.fill();
+			ctx.stroke();
+		}
+
+		function updateStar() {
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+			for (var i = 0; i <200; i++) {
+				var star={
+
+					R:Math.random()*10+10,
+					// r:(Math.random()*10+10)*0.5,
+					x:canvas.width*Math.random(),
+					y:canvas.height*Math.random(),
+					rot:Math.random()*180,
+					fillColor:color[Math.floor(Math.random()*color.length)],
+					// lineColor:color[Math.floor(Math.random()*color.length)],
+					lineWidth:Math.random()*3
+				
+					};
+
+				if (star.y>0&&star.x>0&&star.x+2*star.R<=canvas.width&&star.y+2*star.R<=canvas.height) {
+
+					drawStar(star.R*0.5,star.R,star.x,star.y,star.rot,star.fillColor,star.fillColor,star.lineWidth,ctx);
+				
+				} else {
+					}
+				}
+		}
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+toString()
+js中，定义的所有对象都有toString()方法。Number类型的toString方法比较特殊，有默认模式和基模式两种。
+
+默认模式：
+var num1=10，num2=10.0；
+alert(num1.toString());//10
+alert(num2.toString());//10
+默认模式只按10返回。
+
+基模式：
+var num1=10;
+alert(num1.toString(2));//1010;
+alert(num1.toString(8));//12;
+alert(num1.toString(16));//A;
+基模式就是把数值类型转换成响应的进制。
+
+
+object.valueof()
+valueof()函数返回指定的原始值。
+JavaScript的许多内置对象都重写了该函数，以实现更适合自身的功能需要。因此，不同类型的valueof方法返回值和返回值类型均可能不同。
+
+对象           返回值
+Array          数组实例对象
+Boolean        布尔值
+Date           以毫秒数储存的时间值，从UTC1970年1月1日午夜开始。
+Function       函数本身
+Number         数字值
+Object         对象本身。这是默认设置。
+String         字符值。
+
+//在当前页面内追加换行标签和指定的HTML内容
+function w( html ){
+	document.body.innerHTML += "<br/>" + html;
+}
+
+
+//Array：返回数组对象本身
+var array = ["CodePlayer", true, 12, -5];
+w( array.valueOf() === array ); // true
+
+// Date：返回Unix时间戳数值(毫秒数)
+var date = new Date(2013, 7, 18, 23, 11, 59, 230);
+w( date.valueOf() ); // 1376838719230
+
+// Number：返回数字值
+var num =  15.26540;
+w( num.valueOf() ); // 15.2654
+
+// 布尔：返回布尔值true或false
+var bool = true;
+w( bool.valueOf() === bool ); // true
+// new一个Boolean对象
+var newBool = new Boolean(true);
+// valueOf()返回的是true，两者的值相等
+w( newBool.valueOf() == newBool ); // true
+// 但是不全等，两者类型不相等，前者是boolean类型，后者是object类型
+w( newBool.valueOf() === newBool ); // false
+
+// Function：返回函数本身
+function foo(){	
+}
+w( foo.valueOf() === foo ); // true
+var foo2 =  new Function("x", "y", "return x + y;");
+w( foo2.valueOf() === foo2 ); // true
+
+// Object：返回对象本身
+var obj = {name: "张三", age: 18};
+w( obj.valueOf() === obj ); // true
+
+// String：返回字符串值
+var str = "http://www.365mini.com";
+w( str.valueOf() === str ); // true
+// new一个字符串对象
+var str2 = new String("http://www.365mini.com");
+// 两者的值相等，但不全等，因为类型不同，前者为string类型，后者为object类型
+w( str2.valueOf() === str2 ); // false

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+/*	function fn() {
+		var max=10;
+
+		return function bar(x) {
+		if (x>max) {
+				alert(x);
+			}
+		}
+	}
+
+	var f1=fn(),max=100;
+	f1(15);*/
+
+var max=10,
+	fn=function (x) {
+		if (x>max){
+			console.log(x);
+		}
+	};
+
+(function (f) {
+	var max =100;
+	f(15);
+})(fn);
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>七巧板</title>
+</head>
+<body>
+	<canvas id="canvas" style="border: 3px solid black;display: block;margin: 50px auto">
+		当前浏览器不支持canvas，请更换浏览器再试
+	</canvas>
+
+	<script>
+		arr=[
+			{p:[{x:0,y:0},{x:800,y:0},{x:400,y:400}],color:"#caff67"},
+			{p:[{x:0,y:0},{x:400,y:400},{x:0,y:800}],color:"#67becf"},
+			{p:[{x:800,y:0},{x:800,y:400},{x:600,y:600},{x:600,y:200}],color:"#ef3d61"},
+			{p:[{x:600,y:200},{x:600,y:600},{x:400,y:400}],color:"#f9f51a"},
+			{p:[{x:400,y:400},{x:600,y:600},{x:400,y:800},{x:200,y:600}],color:"#a594c0"},
+			{p:[{x:200,y:600},{x:400,y:800},{x:0,y:800}],color:"#fa8ecc"},
+			{p:[{x:800,y:400},{x:800,y:800},{x:400,y:800}],color:"#f6ca29"},
+		]
+
+		window.onload=function(){
+			var canvas=document.getElementById('canvas');
+
+			var a=0.5;
+
+			canvas.width=800*a;
+			canvas.height=800*a;
+
+			var context=canvas.getContext("2d");
+			for (var i = 0; i < arr.length; i++) {
+				draw(arr[i],context);
+			}
+
+			function draw(piece,ctx) {
+				ctx.beginPath();
+				ctx.moveTo(piece.p[0].x*a,piece.p[0].y*a);
+				for (var i = 0; i < piece.p.length; i++) {
+					ctx.lineTo(piece.p[i].x*a,piece.p[i].y*a);
+				}
+				ctx.closePath();
+
+				ctx.fillStyle=piece.color;
+				ctx.fill();
+
+				ctx.strokeStyle='black';
+				ctx.lineWidth=3*a;
+				ctx.stroke();
+			}
+		}
+	</script>
+</body>	
+</html>

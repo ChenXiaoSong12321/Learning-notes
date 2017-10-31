@@ -1,0 +1,25 @@
+﻿对象：JavaScript的简单数据类型包括数字、字符串、布尔值（true和false）、null值和undefined值。其他所有的值都是对象。数字、字符串和布尔值“貌似”对象，因为它们都拥有方法，但它们是不可变的。JavaScript中的对象是可变的键控集合。在JavaScript中，数组是对象，函数是对象，当然，对象也是对象。
+
+对象是属性的容器，其中每个属性都拥有名字和值。属性的名字可以是包括空字符串在内的任意字符串。属性值可以是除undefined值之外的任何值。
+
+JavaScript中的对象是无类型的。它对新属性的名字和属性的值没有限制。对象适合用于汇集和管理数据。对象可以包含其他对象，所以它们可以很容易的表示成树状或图形结构。
+
+JavaScript包含一种原型链的特性，允许对象继承另一个对象的属性。正确的使用它能减少初始化时消耗时间和内存。
+
+hasOwnproperty方法是JavaScript中唯一一个处理对象属性而不会往上遍历原型链的。如果对象拥有独有的属性，它将返回true。
+
+原型链：JS在创建对象（不论是普通对象还是函数对象）的时候，都有一个叫做__proto__的内置属性，用于指向创建它的函数对象的原型对象prototype
+1.Object.__proto__ === Function.prototype // true
+  Object是函数对象，是通过new Function()创建，所以Object.__proto__指向Function.prototype。
+2.Function.__proto__ === Function.prototype // true
+  Function 也是对象函数，也是通过new Function()创建，所以Function.__proto__指向Function.prototype。
+
+原型对象prototype中都有个预定义的constructor属性，用来引用它的函数对象。
+  person.prototype.constructor === person //true
+  Function.prototype.constructor === Function //true
+  Object.prototype.constructor === Object //true
+
+原型：每一个对象都连接到一个原型对象，并且它可以从中继承属性。所有通过对象字面量创建的对象都连接到Object.prototype，它是JavaScript中的标配对象。
+
+typeof会返回一个变量的基本类型，只有以下几种：number,boolean,string,object,undefined,function；
+instanceof只能用来判断对象和函数，不能用来判断字符串和数字

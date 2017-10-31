@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>daojishi</title>
+	<style>
+		canvas{display: block;margin: 50px auto;}
+	</style>
+
+</head>
+<body>
+	<canvas id="canvas" width=1024 height=768 style="border: 3px solid #eee">
+		当前浏览器不支持canvas，请更换浏览器再试
+	</canvas>
+
+	<script>
+		var canvas=document.getElementById('canvas');
+		var ctx=canvas.getContext('2d');
+
+		var balls={x:512,y:100,g:2,r:20,vx:4,vy:-4,color:"#058"};
+		setInterval(function(){
+			render(ctx);
+			update();
+		},50)
+
+		function render(ctx) {
+			ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+
+			ctx.fillStyle=balls.color;
+			ctx.beginPath();
+			ctx.arc(balls.x,balls.y,balls.r,0,2*Math.PI);
+			ctx.closePath();
+
+			ctx.fill();
+		}
+
+		function update() {
+
+			balls.x += balls.vx;
+			balls.y += balls.vy;
+			balls.vy += balls.g;
+
+			if (balls.y>=768-balls.r) {
+				balls.y = 768-balls.r;
+				balls.vy = -0.7*balls.vy;
+			}
+
+		}
+	</script>
+</body>
+</html>
