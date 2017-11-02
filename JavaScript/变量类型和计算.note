@@ -58,7 +58,7 @@ if(obj.a == null){
 }
 
 6、js中内置函数 -- 数据封装类对象
-Obeject
+Object
 Array
 Boolean
 Number

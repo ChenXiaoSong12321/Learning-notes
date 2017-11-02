@@ -1,6 +1,6 @@
 var a = {} 其实是 var a = new Object() 的语法糖
 var a = [] 其实是 var a = new Array() 的语法糖
-var function Foo(){} 其实是 var Foo = new Function() 的语法糖
+function Foo(){} 其实是 var Foo = new Function() 的语法糖
 使用instanceof判断一个函数是否是一个变量的构造函数
 在整个原型链上找
 变量 instanceof 构造器
