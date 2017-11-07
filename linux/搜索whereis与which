@@ -4,3 +4,7 @@ whereis 命令名
 选项
 -b 只查找可执行文件
 -m 只查找帮助文件
+
+PATH环境变量：定义的是系统搜索命令的路径
+root@localhost:~ # echo $PATH
+/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/root/bin

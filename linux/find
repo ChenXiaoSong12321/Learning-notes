@@ -1,0 +1,41 @@
+find [搜索范围] [搜索条件]
+搜索文件
+
+find / -name install.log
+搜索文件名为install.log的文件
+
+linux通配符
+* 匹配任意字符
+？匹配任意一个字符
+[] 匹配任意一个中括号内的字符
+
+find /root -name "*[ab]"
+find /root -iname "*[ab]" 不区分大小写
+find /root -nouser 没有所有者文件
+
+find /var/log/ -mtime +10
+-10 10天内修改文件
+10 10天内修改文件
++10 10天前修改文件
+
+atime 文件访问时间
+ctime 改变文件属性
+mtime 修改文件内容
+
+find . size 25k
+查找文件大小是25kb的文件
+-25k 小于25k
+25k 等于25k
++25k 大于25k
+
+find . inum 262422
+查找i节点是262422的文件
+
+
+find /etc -size +20k -a -size -50k
+-a and 与
+-o or 或
+
+find /etc -size +20k -a -size -50k -exec ls lh {} \;
+并显示详细信息
+-exec/-ok 命令{}\; 对搜索结果执行操作
