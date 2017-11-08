@@ -1,0 +1,8 @@
+root@localhost:~ # echo -e "\e[1;31m 沙发斯蒂芬 \e[0m"
+ 沙发斯蒂芬 
+
+root@localhost:/tmp # chmod 755 hello.sh 
+
+#!/bin/bash
+
+echo -e "\e[1;36m 撒打发斯蒂芬 \e[0m"

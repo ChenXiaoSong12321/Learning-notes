@@ -1,0 +1,19 @@
+关机和重启
+shutdown [选项] 时间
+选项：
+-c 取消前一个关机命令
+-h 关机
+-r 重启 
+shutdown -r now === reboot
+
+查看运行级别
+cat /etc/inittab
+1:2345:respawn: /sbin/mingetty --autologin root --loginprog /usr/sbin/efw-console tty1
+2:2345:respawn: /sbin/mingetty --autologin root --loginprog /usr/sbin/efw-console tty2
+3:2345:respawn: /sbin/mingetty --autologin root --loginprog /usr/sbin/efw-console tty3
+4:2345:respawn: /sbin/mingetty --autologin root --loginprog /usr/sbin/efw-console tty4
+5:2345:respawn: /sbin/mingetty --autologin root --loginprog /usr/sbin/efw-console tty5
+6:2345:respawn: /sbin/mingetty --autologin root --loginprog /usr/sbin/efw-console tty6
+
+退出登录用户
+logout
