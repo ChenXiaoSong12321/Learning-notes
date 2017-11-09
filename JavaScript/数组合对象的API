@@ -1,0 +1,43 @@
+数组和对象的API
+
+Array
+forEach 遍历所有函数
+every 判断所有元素是否都符合条件
+some 判断是否有至少一个元素符合条件
+sort 排序
+map 对元素重新组装，生成新数组
+filter 过滤符合条件的元素
+
+Object
+for(var key in obj){
+	if(obj.hasOwnproperty()){
+		...
+	}
+}
+
+能同时遍历对象和数组的forEach函数
+function forEach(arrOrObj,fn){
+	if (arrOrObj instanceof Array){
+		arrOrObj.forEach(function(item,index){
+			fn(index,item)
+		})
+	}else if(arrOrObj instanceof Object){
+		for(var key in arrOrObj){
+			fn(key,obj[key])
+		}
+	}else{
+		console.log('not array or object')
+	}
+}
+var arr = [1,2,3]
+forEach(arr,function(index,item){
+	console.log(index,item)
+})
+var obj = {a:100,b:200}
+forEach(obj,function(key,value){
+	console.log(key,value)
+})
+var other = 300
+forEach(other,function(key,value){
+	console.log(key,value)
+})

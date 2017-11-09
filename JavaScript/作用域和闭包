@@ -1,0 +1,98 @@
+执行上下文：一段script或者一个函数
+变量提升：在执行一段script标签时会先把所有的变量声明和函数声明提到最前，进入函数之后会把变量声明和函数声明提到最前面
+全局：变量定义、函数声明 一段<script>
+函数：变量定义、函数声明、this、arguments 函数
+函数声明: function fn(){}
+函数表达式: var fn = function(){}
+
+this要在执行时才能确认值，定义时无法确认
+var a = {
+	name:'A',
+	fn:function(){
+		console.log(this.name)
+	}
+}
+a.fn() //this === a
+a.fn.call({name:'B'}) //this === {name:'B'}
+var fn1 = a.fn
+fn1() //this === window
+
+this应用场景：
+作为构造函数执行
+作为对象属性执行
+作为普通函数执行
+call apply bind（改变this的指向）
+call(将this指向的对象,函数传入的参数)
+bind需要在函数表达式中使用
+
+无块级作用域
+if(true){
+	var name = 'zhangsan'
+}
+console.log(name) //zhangsan
+
+函数和全局作用域
+var a =100 
+function fn(){
+	var a = 200
+	console.log('fn',a)
+}
+console.log('global',a)
+fn()
+防止变量污染可以把变量在函数中声明
+
+var a = 100
+function fn(){
+	var b = 200
+	//当前作用域没有定义的变量，即"自由变量"
+	console.log(a)
+	
+	console.log(b)
+}
+fn()
+
+作用域链
+在函数中逐层向其父级作用域寻找变量
+
+创建10个<a>标签点击的时候弹出来对应的序号
+for(var i = 0;i<10;i++){
+	(function(i){
+		//10个自定义立即执行函数
+		//函数作用域
+		var a = document.createElement('a')
+		a.innerHTML = i + '<br>'
+		a.addEventListener('click',function(e){
+			e.preventDefault()
+			alert(i) //i为函数作用域
+		})
+		document.body.appendChild(a)
+	})(i)
+} 
+//错误的写法
+for(var i = 0;i<10;i++){
+	var a = document.createElement('a')
+	a.innerHTML = i + '<br>'
+	a.addEventListener('click',function(e){
+		e.preventDefault()
+		alert(i) //i是自由变量，要去父作用域获取值，父作用域为全局作用域
+	})
+	document.body.appendChild(a)
+} 
+闭包实际应用中主要用于封装变量，收敛权限
+function isFirstLoad(){
+	var _list = []
+	return function(id){
+		if(_list.indexOf(id)>=0){
+			return false
+		}else{
+			_list.push(id)
+			return true
+		}
+	}
+}
+//在isFirstLoad外部无法修改_list的值
+
+var firstLoad = isFirstLoad()
+firstLoad(10) //true
+firstLoad(10) //false
+firstLoad(20) //true

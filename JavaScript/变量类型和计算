@@ -1,0 +1,74 @@
+变量类型和计算(一)
+
+js变量按存储方式区分哪些类型，并描述其特点
+值类型：
+var a = 100
+var b = a
+a = 200
+console.log(b) //100
+undefined、string、number、boolean
+分块存在内存中
+
+引用类型：
+var a = {age:20}
+var b = a
+b.age = 30
+console.log(a.age) //30
+a和b的指针都指向{age：20}这个对象
+为了共用内存空间
+引用类型：数组、对象、函数
+特点：好几个变量引用一个内存块、可以无限制扩展属性
+
+typeof只能判断值类型
+typeof {}  //object
+typeof []  //object
+typeof null //object
+typeof console.log //function
+
+变量计算-强制类型转换（值类型）
+
+1、字符串拼接
+
+2、==运算符
+100 == '100' //true
+0 = '' //true
+null = undefined //true
+
+3、if语句
+var a =true
+if(a){} //true
+var b = 100
+if(b){} //true
+var c = ''
+if(c){} //false
+if为false的情况 0、''、null、NaN、undefined、false
+
+4、逻辑运算符
+console.log(10 && 0) //0
+console.log('' && 'abc') //'abc'
+console.log(!window.abc) //true
+判断一个变量会被当做true还是false
+var a = 100
+console.log(!!a) //true
+
+5、何时使用 === 何时使用 ==
+if(obj.a == null){
+	//这里相当于obj.a === null || obj.a === undefined ,简写形式
+	//jquery推荐写法
+}
+
+6、js中内置函数 -- 数据封装类对象
+Object
+Array
+Boolean
+Number
+String
+Function
+Date
+RegExp
+Error
+
+如何理解JSON
+1、是一种数据格式2、js内置对象
+JSON.stringify({a:10,b:20})
+JSON.parse('{"a":10,"b":20}')
