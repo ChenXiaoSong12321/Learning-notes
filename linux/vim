@@ -1,0 +1,5 @@
+vim
+vim + / 最后一行
+vim +3 / 打开光标在第三行
+vim +/haha 光标定位到haha出现的第一行，通过n切换
+vim aa bb cc 没有则创建，:n下一个 :N上一个
