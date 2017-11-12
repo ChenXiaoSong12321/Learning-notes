@@ -6,7 +6,7 @@ git fetch [<options>] [<repository> [<refspec>…]]
 git fetch [<options>] <group>
 git fetch --multiple [<options>] [(<repository> | <group>)…]
 git fetch --all [<options>]
-Shell
+
 描述
 
 从一个或多个其他存储库中获取分支和/或标签(统称为“引用”)以及完成其历史所必需的对象。 远程跟踪分支已更新(Git术语叫做commit)，需要将这些更新取回本地，这时就要用到git fetch命令。
