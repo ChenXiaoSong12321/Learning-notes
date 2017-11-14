@@ -1,0 +1,9 @@
+git 分支管理
+
+git branch 查看分支
+git checkout -b dev 新建dev分支
+git push origin dev  push到dev分支
+git checkout master 切换到master分支
+git pull
+git merge dev 将dev合并到master
+git push origin master push到源分支
