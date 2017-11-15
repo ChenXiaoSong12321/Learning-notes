@@ -7,3 +7,5 @@ git checkout master 切换到master分支
 git pull
 git merge dev 将dev合并到master
 git push origin master push到源分支
+
+git remote and XXX url 在远端创建新的分支

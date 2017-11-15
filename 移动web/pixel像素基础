@@ -1,0 +1,25 @@
+px：css pixels 逻辑像素，浏览器使用的抽象单位
+dp，pt：device independent pixel 设备无关像素
+dpr：devicePixelRatio 设备像素缩放比
+
+DPI:打印机每英寸可以喷的墨汁点（印刷行业）
+PPI:屏幕每英寸的像素数量，即单位英寸内的像素密度
+在计算机显示设备参数描述上，二者意思表达的是一样的
+ppi = 根号(1136^2+640^2)/4 = 326ppi 视网膜retina屏 1136与640位硬件像素，非px
+
+ppi        120   160  240  320 
+默认缩放比 0.75  1.0  1.5  2.0
+
+ppi越高，像素数越高，图像越清晰
+像素分辨率1136*640db  -->  根号(1136^2+640^2)/4 = 326ppi  dpr=2 --> 1px = dpr^2*db
+--> 屏幕为320*568px
+
+viewport
+手机浏览器默认为我们做了两件事
+1、页面渲染在一个980px（ios）的viewport
+2、缩放
+
+移动Web最佳viewport设置
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+布局viewport = 设备宽度 = 度量viewport
