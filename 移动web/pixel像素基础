@@ -72,3 +72,15 @@ font-size不使用rem，用px
 	-webkit-box-orient:vertical;
 	-webkit-line-clamp:2;
 }
+
+自定义Tap事件原理：
+		在touchstart时记录时间、手指位置,在touchhend时进行比较,如果手指位置没有移动(或位移非常小)且时间间隔较短(一般200ms),且过程中未曾触发过touchmove,即可认为触发了手持设备上的'click',一般称它为'tap';
+
+	※ 移动端click事件有300 ms延迟,一般使用Tap自定义事件代替click事件;
+300毫秒原因，为了区分是双击还是单击。
+使用自定义的tap事件来代替click事件，但会有一个遮盖层点透的bug，因为300毫秒。
+Tap 透传 解决方案：
+1.使用缓动动画，过度 300ms 的延迟；
+2.中间层 dom 元素（透明的dom节点）的加入，让中间层接收这个‘穿透’事件，稍后隐藏
+3.上下都使用 tap 事件，原理上解决 tap 透传 （但不可避免原声标签的 click 事件的触发）
+4.改用 Fastclick 的库（）
