@@ -23,3 +23,52 @@ viewport
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 
 布局viewport = 设备宽度 = 度量viewport
+
+<link rel="stylesheet" href="css/media_test.css" media="screen and (min-width:800px) and (max-width:1024px)">
+
+/*额外为1024px范围做了些调节*/
+ 	@media screen and (max-width:1024px) {}
+/*平板的宽度*/
+    @media screen and (max-width:980px){}
+
+ 	@media screen and (max-width:720px){}
+
+	@media screen and (max-width: 640px){}
+
+    @media screen and (max-width: 320px){}
+
+相对单位 rem
+为了适应各大屏幕的手机，px略显固定，不能根据尺寸的大小而改变，使用相对单位更能体验页面兼容性
+em：根据父节点的font-size为相对单位
+rem：根据html的font-size为相对单位
+rem的基值：rem=screen.width/20
+
+默认320px
+html{font-size：32px;}
+iphone6
+@media(min-device-width:375px){
+	html{font-size:37.5px;}
+}
+iphone6 plus
+@media(min-device-width:414px){
+	html{font-size:41.4px;}
+}
+font-size不使用rem，用px
+
+单行文本溢出...
+.inaline{
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+多行文本溢出...
+.intwoline{
+	display:-webkit-box!important;
+	overflow:hidden;
+
+	text-overflow:ellipsis;
+	word-break:break-all;
+
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2;
+}
