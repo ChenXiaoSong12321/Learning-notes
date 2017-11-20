@@ -1,3 +1,5 @@
+mongodb基本操作
+
 show dbs            //查看当前端口有多少dbs
 use 数据库名称      //切换数据库，没有数据库时自动创建
 db.dropDatabase()   //删除数据库
@@ -8,3 +10,21 @@ db.集合名.find()    //参数也是json格式可以为空，insert()参数可�
 for(i=1;i<10;i++)db.集合名.insert() //同时插入多条数据
 db.集合名.find().count()   //对数据计数     
 db.集合名.find().skip(3).limit(2).sort()  //忽略前3条限制返回2条数据
+
+db.数据集.update({x:1},{x:99}) //update()至少包括2个参数，查询条件，更新数据
+db.数据集.update({z:100},{$set:{y:99}})//$set为部分更新,set 中的数据会被更新
+
+MongoDB更新多条数据
+update默认更新第一条找到的数据，设计原理，防止update的误操作。
+db.数据库_collection.update({c:1},{$set:{c:2}},false,true) 防止误操作只能用set更新
+
+MongoDB删除操作
+为了防止误操作，删除不允许不传数据，默认删除查找到的所有数据。
+db.数据库_collection.remove({x:2})  删除查找到的数据。
+db.数据库_collection.drop() 删除表
+
+数据量较大使用索引会加快数据查找
+db.local_collection.getIndexes()        //查看集合的索引情况
+db.local_collection.ensureIndex({x:1})  //创建索引，参数是json文档，key值代表方向，1代表正向排序，-1 代表负向排序
+db.local_collection.ensureIndex({x:-1})
+db.local_collection.find({)
