@@ -1,0 +1,31 @@
+触摸才是移动设备的交互的核心基础
+touchstart 手指触摸屏触发
+touchmove 手指在屏幕滑动，连续触发
+touchend 手指离开屏幕时触发
+touchcancel 系统取消touch时触发
+
+除常见的事件属性外，触摸事件包含转悠的触摸属性
+touches 跟踪触摸操作的touch对象数组
+targetTouches 特定事件目标的touch对象数组
+changeTouches 上次触摸改变的touch对象数组
+
+每个touch对象包含属性
+clientX触摸目标在视口中的x坐标
+clientY触摸目标在视口中的y坐标
+identifier标识触摸的为id
+pageX触摸目标在页面中的x坐标（包括滚动）
+pageY触摸目标在页面中的y坐标（包括滚动）
+screenX触摸目标在屏幕中的x坐标
+screenY触摸目标在屏幕中的y坐标
+target触摸的dom节点
+
+弹性滚动
+当客户端页面滚动到顶部或底部时，滚动条会收缩并多滑动一定距离，通过缓冲反弹的效果，带给用户良好的体验
+移动web页面要注意：
+body层滚动：自带弹词能够滚动，overflow：hidden失效，gif和定时器暂停
+局部滚动：没有弹性滚动，没有滚动惯性，不流畅
+body{
+	overflow：scroll；
+	-webkit-overflow-scrolling：touch；
+}
+下拉刷新，上拉加载
