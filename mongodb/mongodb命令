@@ -1,0 +1,10 @@
+show dbs            //查看当前端口有多少dbs
+use 数据库名称      //切换数据库，没有数据库时自动创建
+db.dropDatabase()   //删除数据库
+mongo 中一张表称为一个集合
+db.集合名.insert()  //insert()接受一个参数，参数即为要写入的文档，json格式
+show collections    //查看创建的表
+db.集合名.find()    //参数也是json格式可以为空，insert()参数可以指定 _id
+for(i=1;i<10;i++)db.集合名.insert() //同时插入多条数据
+db.集合名.find().count()   //对数据计数     
+db.集合名.find().skip(3).limit(2).sort()  //忽略前3条限制返回2条数据
