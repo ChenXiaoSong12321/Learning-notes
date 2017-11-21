@@ -1,0 +1,4 @@
+安装compass
+
+淘宝镜像gem sources --add http://gems.ruby-china.org/
+gem install compass

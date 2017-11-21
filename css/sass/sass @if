@@ -1,0 +1,25 @@
+sass @if
+// ----
+// Sass (v3.4.12)
+// Compass (v1.0.3)
+// ----
+
+//SCSS
+@mixin blockOrHidden($boolean:true) {
+  @if $boolean {
+    @debug "$boolean is #{$boolean}";
+      display: block;
+    }
+    @else {
+      @debug "$boolean is #{$boolean}";
+      display: none;
+    }
+}
+
+.block {
+  @include blockOrHidden;
+}
+
+.hidden{
+  @include blockOrHidden(false);
+}
