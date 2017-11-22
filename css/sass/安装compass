@@ -2,3 +2,36 @@
 
 淘宝镜像gem sources --add http://gems.ruby-china.org/
 gem install compass
+
+将.scss文件转换成.sass文件：sass-convert main.scss main.sass
+
+创建项目：compass create project-name
+cd当前目录进行 监听：compass watch
+添加合适注释
+
+使用原生@import的既定规则；
+1.当@import后边跟的文件名是以.css结尾的时候！
+2.当@import后边跟的是http://开头的字符串的时候！
+3.当@import后边跟的是一个url()函数的时候！
+4.当@import后边跟的是带有media queries 的时候！
+
+变量操作：
+1、直接操作变量，即变量表达式
+2、通过函数 
+   {
+   ·跟代码块无关的函数，多为内置函数functions
+   ·可重用的代码块，成为mixin{
+              @include方式调用（以复制拷贝方式存在的）
+              @extend方式调用，（以组合声明存在的）
+    }
+}
+
+@extend 不能继承嵌套的样式
+
+sass中的@media跟css区别：
+ sass中的media query可以内嵌在css规则中，
+ 在生成css的时候，
+ media query才会被提到样式的最高层级
+好处：避免了重复书写选择器或者打乱样式表的流程
+
+compass compile
