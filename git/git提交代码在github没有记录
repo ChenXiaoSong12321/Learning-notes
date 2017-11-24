@@ -1,4 +1,4 @@
 邮箱用户名不对
 改下本地git配置
-git config --global user.name "username"
-git config --global user.email “username@mail.com”
+git config --global user.name "Jerry12138"
+git config --global user.email "448216252@qq.com"
