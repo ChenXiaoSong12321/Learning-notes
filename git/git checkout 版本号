@@ -1,4 +1,4 @@
 git checkout 版本号
- 将本地仓回退到指定版本
+将本地仓回退到指定版本
 git reset --hard 
 git checkout master
