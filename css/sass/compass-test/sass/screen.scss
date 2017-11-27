@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -20,7 +21,56 @@
  * BASE
  * 
  */
-@import "variables","compass/reset","top","mixin";
+@import "variables","mixin";
+// @import "top";
+// @import "normalize";
+// normalize核心模块
+/* @import "normalize-version";
+base：用来统一HTML和body标签的字体，文字大小调整、边距等等。
+@import "normalize/base";
+html5：统一html5中新增的元素的展现形式
+@import "normalize/html5";
+links：统一a便签的样式修饰，去掉hover和active时候的边线。
+@import "normalize/links";
+typography：统一b、strong、sub、sup等段落文本的样式修饰。
+@import "normalize/typography";
+embeds：统一img，svg等标签的样式修饰（比如统一img标签的border为0 ）
+@import "normalize/embeds";
+groups：统generate_conflict_warning_msg一figure、pre、code等标签的样式
+@import "normalize/groups";
+forms：统一form相关的button、input、等标签的样式
+@import "normalize/forms";
+tables：统一table相关的table、td、th等标签的样式
+@import "normalize/tables"; */
+
+/*  有三个模块，如下： */
+// @import "compass/layout";
+/* 定高，定宽，或者自适应的背景 */
+// @import "compass/layout/grid-background";
+/* 提供页面中的页脚部分始终处于最底部的能力 */
+// @import "compass/layout/sticky-footer";
+/* 用于拉伸填满整个父容器的能力 */
+// @import "compass/layout/stretching";
+/* (使用绝对定位 )*/
+// @include stretch($offset-top: 0,0,0,0);
+// 始终居于底部
+// div#my-root
+	// div#my-root-footer
+// div#my-footer
+// @include sticky-footer(30px,"#my-root","#my-root-footer","#my-footer");
+
+@import "compass/css3";
+// $supported-browers:chrome;
+$brower-minimum-versions:("ie":"8");
+@import "compass/support";
+// compass 内置了browser()函数;
+// 返回浏览器的列表。
+
+// 命令行中
+// compass interactive  中断compass watch
+// 查看浏览器版本browser-versions();
+@debug browsers();	 
+// @debug browser-versions();	
 
 body{
 	background-color:$bg-color;
@@ -74,3 +124,7 @@ p{
 .true-right{
 	@extend %right;
 }
+
+// #footer {
+// 　　　　@include sticky-footer(54px)
+// 　　}

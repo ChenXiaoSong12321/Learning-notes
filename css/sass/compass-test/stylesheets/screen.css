@@ -7,136 +7,88 @@
  * CONTENTS
  *
  * SETTINGS
- * variables .....................鍙橀噺
+ * variables .....................变量
  * 
  * TOOLS
  *
  * COMPONENTS
- * reset .........................閲嶇疆鏍峰紡
+ * reset .........................重置样式
  * 
  * BUSINESS
  *
  * BASE
  * 
  */
-/* line 5, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* line 22, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-/* line 1, ../sass/top.scss */
-.btn {
-  padding: 3px;
-}
-
-/* line 25, ../sass/screen.scss */
+/* @import "normalize-version";
+base：用来统一HTML和body标签的字体，文字大小调整、边距等等。
+@import "normalize/base";
+html5：统一html5中新增的元素的展现形式
+@import "normalize/html5";
+links：统一a便签的样式修饰，去掉hover和active时候的边线。
+@import "normalize/links";
+typography：统一b、strong、sub、sup等段落文本的样式修饰。
+@import "normalize/typography";
+embeds：统一img，svg等标签的样式修饰（比如统一img标签的border为0 ）
+@import "normalize/embeds";
+groups：统generate_conflict_warning_msg一figure、pre、code等标签的样式
+@import "normalize/groups";
+forms：统一form相关的button、input、等标签的样式
+@import "normalize/forms";
+tables：统一table相关的table、td、th等标签的样式
+@import "normalize/tables"; */
+/*  有三个模块，如下： */
+/* 定高，定宽，或者自适应的背景 */
+/* 提供页面中的页脚部分始终处于最底部的能力 */
+/* 用于拉伸填满整个父容器的能力 */
+/* (使用绝对定位 )*/
+/* line 75, ../sass/screen.scss */
 body {
   background-color: blue;
 }
-/* line 27, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 body .main {
   font-size: 13px;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 a {
   font-weight: 600;
   font-size: 40px;
 }
-/* line 33, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 a:hover {
   color: #333;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 p {
   color: #8000ff;
 }
 
-/* line 45, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .wbdemo {
   width: 50%;
   float: left;
 }
-/* line 47, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 .wbdemo:hover {
   background-color: blue;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .wbdemo {
   width: 50%;
   float: left;
 }
 
-/* line 54, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .wbdemo2 {
   width: 20%;
   float: left;
 }
 
 @media (min-width: 768px) {
-  /* line 57, ../sass/screen.scss */
+  /* line 107, ../sass/screen.scss */
   .wbdemo3 {
     width: 50%;
     float: left;
@@ -144,24 +96,24 @@ p {
 }
 
 @media (min-width: 768px) {
-  /* line 60, ../sass/screen.scss */
+  /* line 110, ../sass/screen.scss */
   .wbdemo4 {
     width: 30%;
     float: left;
   }
 }
 
-/* line 63, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .error, .serious-error {
   color: red;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .serious-error {
   border: 1px solid red;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .true-right {
   color: green;
 }
