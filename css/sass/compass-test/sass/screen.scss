@@ -69,9 +69,57 @@ $brower-minimum-versions:("ie":"8");
 // 命令行中
 // compass interactive  中断compass watch
 // 查看浏览器版本browser-versions();
-@debug browsers();	 
+// @debug browsers();	 
 // @debug browser-versions();	
 
+@import "compass/typography/links";
+@import "compass/typography/lists";
+@import "compass/typography/text";
+a{
+	// @include hover-link();
+	@include link-colors(#00c,#cc0,#0c0,#c00,#0cc);
+}
+
+.list-unstyled{
+	@include no-bullets();
+}
+.list-unstyled2{
+	@include no-bullet();
+}
+.list-inline{
+	@include inline-list();
+}
+.list-horizontal{
+	@include horizontal-list(0,right);
+}
+.list-inline-block{
+	@include inline-block-list(2px);
+}
+
+// 强制换行
+.text-force-wrap{
+	@include force-wrap();
+}
+
+.nowrap{
+	@include nowrap();
+}
+// 兼容低版本火狐ellipsis，需先compass install compass/ellipsis
+// 开启兼容
+$use-mozilla-ellipsis-binding:true;
+.text-ellipsis{
+	@include ellipsis();
+}
+
+.text-hide{
+	@include hide-text();
+	@include squish-text();
+}
+.btn-find{
+	@include replace-text("图片地址");
+	// 自动设置图片为btn大小
+	@include replace-text-with-dimensions("图片地址");
+}
 body{
 	background-color:$bg-color;
 	.main{
