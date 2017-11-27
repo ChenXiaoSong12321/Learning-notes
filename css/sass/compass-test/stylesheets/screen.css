@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * variables .....................鍙橀噺
+ * 
+ * TOOLS
+ *
+ * COMPONENTS
+ * reset .........................閲嶇疆鏍峰紡
+ * 
+ * BUSINESS
+ *
+ * BASE
+ * 
+ */
+/* line 5, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../sass/top.scss */
+.btn {
+  padding: 3px;
+}
+
+/* line 25, ../sass/screen.scss */
+body {
+  background-color: blue;
+}
+/* line 27, ../sass/screen.scss */
+body .main {
+  font-size: 13px;
+}
+
+/* line 32, ../sass/screen.scss */
+a {
+  font-weight: 600;
+  font-size: 40px;
+}
+/* line 33, ../sass/screen.scss */
+a:hover {
+  color: #333;
+}
+
+/* line 41, ../sass/screen.scss */
+p {
+  color: #8000ff;
+}
+
+/* line 45, ../sass/screen.scss */
+.wbdemo {
+  width: 50%;
+  float: left;
+}
+/* line 47, ../sass/screen.scss */
+.wbdemo:hover {
+  background-color: blue;
+}
+
+/* line 51, ../sass/screen.scss */
+.wbdemo {
+  width: 50%;
+  float: left;
+}
+
+/* line 54, ../sass/screen.scss */
+.wbdemo2 {
+  width: 20%;
+  float: left;
+}
+
+@media (min-width: 768px) {
+  /* line 57, ../sass/screen.scss */
+  .wbdemo3 {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 60, ../sass/screen.scss */
+  .wbdemo4 {
+    width: 30%;
+    float: left;
+  }
+}
+
+/* line 63, ../sass/screen.scss */
+.error, .serious-error {
+  color: red;
+}
+
+/* line 66, ../sass/screen.scss */
+.serious-error {
+  border: 1px solid red;
+}
+
+/* line 71, ../sass/screen.scss */
+.true-right {
+  color: green;
+}
