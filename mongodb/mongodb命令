@@ -25,6 +25,6 @@ db.数据库_collection.drop() 删除表
 
 数据量较大使用索引会加快数据查找
 db.local_collection.getIndexes()        //查看集合的索引情况
-db.local_collection.ensureIndex({x:1})  //创建索引，参数是json文档，key值代表方向，1代表正向排序，-1 代表负向排序
+db.local_collection.ensureIndex({x:1})  //创建索引，参数是json文档，key值代表方向，1代表正向排序，-1代表负向排序
 db.local_collection.ensureIndex({x:-1})
 db.local_collection.find({)

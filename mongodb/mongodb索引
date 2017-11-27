@@ -8,3 +8,11 @@ mongodb索引
 5. 过期索引
 6. 全文索引
 7. 地理位置索引
+
+db.local_2.insert({x:1})
+db.local_2.getIndexes()
+db.local_2.findOne()
+
+当查询的条件不只有一个时，就需要建立复合索引
+插入{x:1,y:2,z:3}记录想要按照x和y的 值查询，就需要创建索引:
+db.collection.ensureIndex({x:1,y:1})
