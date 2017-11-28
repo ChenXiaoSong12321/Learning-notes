@@ -1,0 +1,3 @@
+compass知识点补充
+
+helper模块中的image-url('图片.png');可以直接指定图片路径。默认是绝对路径，如果要改变成相对路径，需要改变config.rb文件中的relative_assets=true配置项

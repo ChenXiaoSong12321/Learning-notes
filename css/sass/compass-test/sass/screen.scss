@@ -116,11 +116,50 @@ $use-mozilla-ellipsis-binding:true;
 	@include squish-text();
 }
 .btn-find{
-	@include replace-text("图片地址");
+	// @include replace-text("图片地址");
 	// 自动设置图片为btn大小
-	@include replace-text-with-dimensions("图片地址");
+	// @include replace-text-with-dimensions("图片地址");
 }
+
+@import "compass/typography/vertical_rhythm";
+
+$base-font-size:16px;
+$base-line-height:24px;
+@include establish-baseline();
+h1{
+	// font-size:3em; 48px
+	// line-height:1.5em;
+	@include adjust-font-size-to(3em);
+}
+h2{
+	@include adjust-font-size-to(36px);
+}
+h3{
+	@include adjust-font-size-to(24px);
+}
+h4{
+	@include adjust-font-size-to(21px);
+}
+h5{
+	@include adjust-font-size-to(18px);
+}
+h6{
+	@include adjust-font-size-to(16px);
+}
+p{
+	@include adjust-font-size-to(16px);
+	// margin:1.5em 0;
+	@include leader();
+	@include trailer(2);
+}
+
+.analyzer-logo{
+	background-image:inline-image('ajax_uploading.gif');
+	background-image:image-url('ajax_uploading.gif');
+}
+
 body{
+	@include debug-vertical-alignment();
 	background-color:$bg-color;
 	.main{
 		font-size:13px;
