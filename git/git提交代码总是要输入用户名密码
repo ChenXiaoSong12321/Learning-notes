@@ -10,7 +10,6 @@ git config --global credential.helper store
 ☞这一步会在用户目录下生成文件.git-credential记录用户名密码的信息.
 ☞ git config --global 命令实际上在操作用户目录下的.gitconfig文件, 我们cat一下此文件(cat .gitconfig), 其内容如下:
 
-
 [user]
  name = alice
  email = alice@aol.com
