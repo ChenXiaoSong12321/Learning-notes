@@ -61,7 +61,7 @@ tables：统一table相关的table、td、th等标签的样式
 
 @import "compass/css3";
 // $supported-browers:chrome;
-$brower-minimum-versions:("ie":"8");
+// $brower-minimum-versions:("ie":"8");
 @import "compass/support";
 // compass 内置了browser()函数;
 // 返回浏览器的列表。
@@ -75,6 +75,7 @@ $brower-minimum-versions:("ie":"8");
 @import "compass/typography/links";
 @import "compass/typography/lists";
 @import "compass/typography/text";
+// $browser-minimum-versions:("ie","9");
 a{
 	// @include hover-link();
 	@include link-colors(#00c,#cc0,#0c0,#c00,#0cc);
@@ -212,6 +213,52 @@ p{
 	@extend %right;
 }
 
-// #footer {
-// 　　　　@include sticky-footer(54px)
-// 　　}
+#{append-selector("p,div,span",".bar")}{
+	color:#000;
+}
+
+@import "compass/utilities";
+// 亮度值
+// @debug brightness(#000);
+// @debug brightness(#ccc);
+// @debug brightness(#fff);
+
+
+.goods-price{
+	$table-color:#7a98c6;
+	// 外边框
+	@include outer-table-borders(2px,#000);
+	// 内边框
+	@include inner-table-borders(1px,darken($table-color,40%));
+	
+	@include table-scaffolding();
+
+	@include alternating-rows-and-columns($table-color,adjust-hue($table-color,-120deg),#222222);
+}
+
+.clearfix{
+	@include clearfix();
+}
+.clearfix1{
+	@include pie-clearfix();
+}
+.clearfix2{
+	@include legacy-pie-clearfix();
+}
+
+.pull-left{
+	@include float(left);
+	@include float-left();
+}
+// 兼容ie最低版本
+
+
+.need-has-layout{
+	@include has-layout();
+}
+
+.tag-cloud-container{
+	@include tag-cloud(24px);
+}
+
+@import "icons";
