@@ -1,7 +1,7 @@
 # 只引入一次
 require 'compass/import-once/activate'
 
-require 'compass-normalize'
+# require 'compass-normalize'
 # Require any additional compass plugins here.
 
 # set the compass compile enviroment

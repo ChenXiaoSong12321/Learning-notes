@@ -161,9 +161,9 @@ p{
 
 body{
 	@include debug-vertical-alignment();
-	background-color:$bg-color;
+	// background-color:$right-header-bg-color;
 	.main{
-		font-size:13px;
+		font-size:$top-logo-font-size;
 	}
 }
 
@@ -183,7 +183,7 @@ p{
 .wbdemo{
 	@include col-6();
 	&:hover{
-		background-color:$bg-color;
+		// background-color:$bg-color;
 	}
 }
 .wbdemo{

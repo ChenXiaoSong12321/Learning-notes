@@ -1,3 +1,80 @@
-$bg-color: blue;
-$btn-color: green;
-$small-btbn-bg-color: red;
+@charset "utf-8";
+
+// // /* 全局 */
+
+$base-font-size:12px;
+$base-line-height:14px;
+
+// /* 顶部 */
+
+// 顶部背景色
+$top-bg-color:#2B303E;
+// 顶部字体颜色
+$top-font-color:#fefefe;
+// logo字体大小
+$top-logo-font-size:36px;
+// 顶部功能键字体大小
+$top-fn-font-size:15px;
+// /* 左菜单 */
+
+// 左菜单背景色
+$left-menu-bg-color:#2B303E;
+// 左菜单蓝色
+$left-menu-blue:#2299EE;
+// 左菜单hover色
+$left-menu-hover:#3b3f4d;
+// 左菜单字体
+$left-menu-font:#989dac;
+// 左菜单头部字体
+$left-menu-header-font-color:#e6e6bd;
+// 左菜单头部字体大小
+$left-menu-header-font-size:15px;
+// 一级菜单大小
+$left-menu-fir-font-size:15px;
+// 二级菜单大小
+$left-menu-sec-font-size:14px;
+
+// /* 底部 */
+// 底部背景
+$footer-bg-color:#2b2e37;
+// 底部字体
+$footer-font:#fff;
+// 底部字体大小
+$footer-font-size:12px;
+
+// /* 右侧 */
+// 右侧头部背景色
+$right-header-bg-color:#e2e2e2;
+// 右侧三级菜单大小
+$right-header-font-size:14px;
+// 右侧背景
+$right-bg-color:#fff;
+// 右侧头部字体
+$right-header-title:#231915;
+// list_panel背景
+$lp-bg-color:#fff;
+// list_panel按钮字体大小
+$lp-btn-font-size:13px;
+// list_panel表格外边框
+$lp-table-outter-border:#e2e2e2;
+// list_panel表格内边框
+$lp-table-inner-border:#eeeeee;
+// list_panel按钮背景
+$lp-table-btn-bg-color:#5BC0DE;
+// list_panel按钮字体
+$lp-table-btn-font-color:#fefefe;
+// list_panel表格头部背景
+$lp-table-thead-bg-color:#f2f2f2;
+// list_panel表格头部字体大小
+$lp-table-thead-font-size:13px;
+// list_panel奇数行
+$lp-table-even-color:#fefefe;
+// list_panel偶数行
+$lp-table-odd-color:#f8f8f8;
+// list_panel表格字体
+$lp-table-font-color:#3E3938;
+// list_panel表格字体大小
+$lp-table-font-size:12px;
+
+
+

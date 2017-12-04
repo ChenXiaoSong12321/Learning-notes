@@ -252,11 +252,10 @@ body {
   -webkit-background-size: 100% 1.5em;
   background-size: 100% 1.5em;
   background-position: left top;
-  background-color: blue;
 }
 /* line 165, ../sass/screen.scss */
 body .main {
-  font-size: 13px;
+  font-size: 36px;
 }
 
 /* line 170, ../sass/screen.scss */
@@ -278,10 +277,6 @@ p {
 .wbdemo {
   width: 50%;
   float: left;
-}
-/* line 185, ../sass/screen.scss */
-.wbdemo:hover {
-  background-color: blue;
 }
 
 /* line 189, ../sass/screen.scss */
