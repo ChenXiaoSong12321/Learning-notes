@@ -1,0 +1,264 @@
+@charset "utf-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * variables .....................变量
+ * 
+ * TOOLS
+ *
+ * COMPONENTS
+ * reset .........................重置样式
+ * 
+ * BUSINESS
+ *
+ * BASE
+ * 
+ */
+@import "variables","mixin";
+// @import "top";
+// @import "normalize";
+// normalize核心模块
+/* @import "normalize-version";
+base：用来统一HTML和body标签的字体，文字大小调整、边距等等。
+@import "normalize/base";
+html5：统一html5中新增的元素的展现形式
+@import "normalize/html5";
+links：统一a便签的样式修饰，去掉hover和active时候的边线。
+@import "normalize/links";
+typography：统一b、strong、sub、sup等段落文本的样式修饰。
+@import "normalize/typography";
+embeds：统一img，svg等标签的样式修饰（比如统一img标签的border为0 ）
+@import "normalize/embeds";
+groups：统generate_conflict_warning_msg一figure、pre、code等标签的样式
+@import "normalize/groups";
+forms：统一form相关的button、input、等标签的样式
+@import "normalize/forms";
+tables：统一table相关的table、td、th等标签的样式
+@import "normalize/tables"; */
+
+/*  有三个模块，如下： */
+// @import "compass/layout";
+/* 定高，定宽，或者自适应的背景 */
+// @import "compass/layout/grid-background";
+/* 提供页面中的页脚部分始终处于最底部的能力 */
+// @import "compass/layout/sticky-footer";
+/* 用于拉伸填满整个父容器的能力 */
+// @import "compass/layout/stretching";
+/* (使用绝对定位 )*/
+// @include stretch($offset-top: 0,0,0,0);
+// 始终居于底部
+// div#my-root
+	// div#my-root-footer
+// div#my-footer
+// @include sticky-footer(30px,"#my-root","#my-root-footer","#my-footer");
+
+@import "compass/css3";
+// $supported-browers:chrome;
+// $brower-minimum-versions:("ie":"8");
+@import "compass/support";
+// compass 内置了browser()函数;
+// 返回浏览器的列表。
+
+// 命令行中
+// compass interactive  中断compass watch
+// 查看浏览器版本browser-versions();
+// @debug browsers();	 
+// @debug browser-versions();	
+
+@import "compass/typography/links";
+@import "compass/typography/lists";
+@import "compass/typography/text";
+// $browser-minimum-versions:("ie","9");
+a{
+	// @include hover-link();
+	@include link-colors(#00c,#cc0,#0c0,#c00,#0cc);
+}
+
+.list-unstyled{
+	@include no-bullets();
+}
+.list-unstyled2{
+	@include no-bullet();
+}
+.list-inline{
+	@include inline-list();
+}
+.list-horizontal{
+	@include horizontal-list(0,right);
+}
+.list-inline-block{
+	@include inline-block-list(2px);
+}
+
+// 强制换行
+.text-force-wrap{
+	@include force-wrap();
+}
+
+.nowrap{
+	@include nowrap();
+}
+// 兼容低版本火狐ellipsis，需先compass install compass/ellipsis
+// 开启兼容
+$use-mozilla-ellipsis-binding:true;
+.text-ellipsis{
+	@include ellipsis();
+}
+
+.text-hide{
+	@include hide-text();
+	@include squish-text();
+}
+.btn-find{
+	// @include replace-text("图片地址");
+	// 自动设置图片为btn大小
+	// @include replace-text-with-dimensions("图片地址");
+}
+
+@import "compass/typography/vertical_rhythm";
+
+$base-font-size:16px;
+$base-line-height:24px;
+@include establish-baseline();
+h1{
+	// font-size:3em; 48px
+	// line-height:1.5em;
+	@include adjust-font-size-to(3em);
+}
+h2{
+	@include adjust-font-size-to(36px);
+}
+h3{
+	@include adjust-font-size-to(24px);
+}
+h4{
+	@include adjust-font-size-to(21px);
+}
+h5{
+	@include adjust-font-size-to(18px);
+}
+h6{
+	@include adjust-font-size-to(16px);
+}
+p{
+	@include adjust-font-size-to(16px);
+	// margin:1.5em 0;
+	@include leader();
+	@include trailer(2);
+}
+
+.analyzer-logo{
+	background-image:inline-image('./list_panel/edit.png');
+	background-image:image-url('./list_panel/edit.png');
+}
+
+body{
+	@include debug-vertical-alignment();
+	// background-color:$right-header-bg-color;
+	.main{
+		font-size:$top-logo-font-size;
+	}
+}
+
+a{
+	&:hover{
+		color:#333;
+	}
+	font:{
+		weight:600;
+		size:40px;
+	}
+}
+p{
+	color:hsl(270,100%,50%);
+}
+
+.wbdemo{
+	@include col-6();
+	&:hover{
+		// background-color:$bg-color;
+	}
+}
+.wbdemo{
+	@include col();
+}
+.wbdemo2{
+	@include col(20%);
+}
+.wbdemo3{
+	@include col-sm();
+}
+.wbdemo4{
+	@include col-sm(30%);
+}
+.error{
+	color:red;
+}
+.serious-error{
+	@extend .error;
+	border:1px solid red;
+}
+
+%right{
+	color:green;
+}
+.true-right{
+	@extend %right;
+}
+
+#{append-selector("p,div,span",".bar")}{
+	color:#000;
+}
+
+@import "compass/utilities";
+// 亮度值
+// @debug brightness(#000);
+// @debug brightness(#ccc);
+// @debug brightness(#fff);
+
+
+.goods-price{
+	$table-color:#7a98c6;
+	// 外边框
+	@include outer-table-borders(2px,#000);
+	// 内边框
+	@include inner-table-borders(1px,darken($table-color,40%));
+	
+	@include table-scaffolding();
+
+	@include alternating-rows-and-columns($table-color,adjust-hue($table-color,-120deg),#222222);
+}
+
+.clearfix{
+	@include clearfix();
+}
+.clearfix1{
+	@include pie-clearfix();
+}
+.clearfix2{
+	@include legacy-pie-clearfix();
+}
+
+.pull-left{
+	@include float(left);
+	@include float-left();
+}
+// 兼容ie最低版本
+
+
+.need-has-layout{
+	@include has-layout();
+}
+
+.tag-cloud-container{
+	@include tag-cloud(24px);
+}
+
+@import "icons";

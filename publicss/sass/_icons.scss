@@ -1,0 +1,10 @@
+@import "compass/utilities/sprites";
+
+$logo-layout:horizontal;//smart
+@import "other/*.png";
+@import "top/*.png";
+@import "list_panel/*.png";
+
+@include all-top-sprites();
+@include all-other-sprites();
+@include all-list_panel-sprites();
