@@ -19,7 +19,7 @@
  * BASE
  * 
  */
-/* line 5, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,99 +41,198 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 /* line 64, other/*.png */
-.other-sprite, a.logo, #alarm_controller span {
-  background-image: url('../images/other-sf1b5e88008.png');
+.other-sprite, .other-logo, .other-manager_controll, .other-warnning_lamp, a.logo, #alarm_controller span {
+  background-image: url('/images/other-sf1b5e88008.png');
   background-repeat: no-repeat;
 }
 
 /* line 80, top/*.png */
 .top-sprite, .top-change_pwd, .top-help, .top-reboot_sys, .top-shutdown, .top-user {
-  background-image: url('../images/top-sd1acb12554.png');
+  background-image: url('/images/top-sd1acb12554.png');
   background-repeat: no-repeat;
 }
 
 /* line 184, list_panel/*.png */
-.list_panel-sprite {
-  background-image: url('../images/list_panel-sedfdbbf300.png');
+.list_panel-sprite, .list_panel-add_rule, .list_panel-delete_rule, .list_panel-disable_rule, .list_panel-edit, .list_panel-enable_rule, .list_panel-move_down, .list_panel-move_down_disabled, .list_panel-move_up, .list_panel-move_up_disabled, .list_panel-next, .list_panel-previous, .list_panel-refresh, .list_panel-to_bottom, .list_panel-to_bottom_disabled, .list_panel-to_end, .list_panel-to_first, .list_panel-to_top, .list_panel-to_top_disabled {
+  background-image: url('/images/list_panel-sedfdbbf300.png');
   background-repeat: no-repeat;
 }
 
-/* line 84, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .top-change_pwd {
   background-position: 0 0;
 }
 
-/* line 84, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .top-help {
   background-position: 0 -30px;
 }
 
-/* line 84, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .top-reboot_sys {
   background-position: 0 -60px;
 }
 
-/* line 84, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .top-shutdown {
   background-position: 0 -90px;
 }
 
-/* line 84, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .top-user {
   background-position: 0 -120px;
 }
 
-/* line 30, ../sass/maincss.scss */
-body {
-  overflow: hidden;
-  font-family: "微软雅黑", sans-serif;
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.other-logo {
+  background-position: 0 0;
 }
 
-/* line 37, ../sass/maincss.scss */
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.other-manager_controll {
+  background-position: 0 -46px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.other-warnning_lamp {
+  background-position: 0 -65px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-add_rule {
+  background-position: 0 0;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-delete_rule {
+  background-position: 0 -14px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-disable_rule {
+  background-position: 0 -29px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-edit {
+  background-position: 0 -44px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-enable_rule {
+  background-position: 0 -61px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-move_down {
+  background-position: 0 -76px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-move_down_disabled {
+  background-position: 0 -93px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-move_up {
+  background-position: 0 -110px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-move_up_disabled {
+  background-position: 0 -127px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-next {
+  background-position: 0 -144px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-previous {
+  background-position: 0 -156px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-refresh {
+  background-position: 0 -168px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-to_bottom {
+  background-position: 0 -180px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-to_bottom_disabled {
+  background-position: 0 -197px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-to_end {
+  background-position: 0 -214px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-to_first {
+  background-position: 0 -226px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-to_top {
+  background-position: 0 -243px;
+}
+
+/* line 84, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.list_panel-to_top_disabled {
+  background-position: 0 -260px;
+}
+
+/* line 10, ../sass/_top.scss */
 .header {
   width: 100%;
   height: 70px;
@@ -141,11 +240,11 @@ body {
   background-color: #2B303E;
   min-width: 950px;
 }
-/* line 41, ../sass/maincss.scss */
+/* line 14, ../sass/_top.scss */
 .header a.logo {
   float: left;
 }
-/* line 44, ../sass/maincss.scss */
+/* line 17, ../sass/_top.scss */
 .header div.header-right {
   float: right;
   width: 51%;
@@ -153,7 +252,7 @@ body {
   min-width: 600px;
 }
 
-/* line 51, ../sass/maincss.scss */
+/* line 24, ../sass/_top.scss */
 a.logo {
   display: inline-block;
   vertical-align: middle;
@@ -169,21 +268,21 @@ a.logo {
   margin-left: 12px;
   margin-top: 14px;
 }
-/* line 6, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_unstyled-link.scss */
+/* line 6, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_unstyled-link.scss */
 a.logo:active, a.logo:focus {
   outline: none;
 }
-/* line 61, ../sass/maincss.scss */
+/* line 34, ../sass/_top.scss */
 a.logo #CH_logo_title {
   font-size: 30px;
   font-family: "华文楷体", serif;
 }
 
-/* line 69, ../sass/maincss.scss */
+/* line 42, ../sass/_top.scss */
 #alarm_controller {
   float: left;
 }
-/* line 71, ../sass/maincss.scss */
+/* line 44, ../sass/_top.scss */
 #alarm_controller span {
   width: 50px;
   height: 60px;
@@ -196,13 +295,13 @@ a.logo #CH_logo_title {
   margin-top: 8px;
 }
 
-/* line 79, ../sass/maincss.scss */
+/* line 52, ../sass/_top.scss */
 .help-div {
   float: right;
   line-height: 58px;
   margin-right: 17px;
 }
-/* line 84, ../sass/maincss.scss */
+/* line 57, ../sass/_top.scss */
 .help-div .kwicks {
   margin: 0;
   padding: 0;
@@ -210,7 +309,7 @@ a.logo #CH_logo_title {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 62, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 62, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
 .help-div .kwicks li {
   list-style-image: none;
   list-style-type: none;
@@ -220,28 +319,28 @@ a.logo #CH_logo_title {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 49, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 49, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
 .help-div .kwicks li:first-child {
   padding-left: 0;
 }
-/* line 50, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 50, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
 .help-div .kwicks li:last-child {
   padding-right: 0;
 }
-/* line 52, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 52, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
 .help-div .kwicks li.last {
   padding-right: 0;
 }
-/* line 87, ../sass/maincss.scss */
+/* line 60, ../sass/_top.scss */
 .help-div .kwicks li form {
   cursor: pointer;
 }
-/* line 90, ../sass/maincss.scss */
+/* line 63, ../sass/_top.scss */
 .help-div .kwicks li form span span {
   font-size: 14px;
   vertical-align: middle;
 }
-/* line 94, ../sass/maincss.scss */
+/* line 67, ../sass/_top.scss */
 .help-div .kwicks li form span i {
   display: inline-block;
   vertical-align: middle;
@@ -252,7 +351,276 @@ a.logo #CH_logo_title {
   height: 30px;
 }
 
-/* line 108, ../sass/maincss.scss */
+/* line 11, ../sass/_footer.scss */
+.main-footer table {
+  font-size: 11px;
+  color: #fff;
+  width: 100%;
+  height: inherit;
+}
+/* line 16, ../sass/_footer.scss */
+.main-footer table tbody tr {
+  width: 100%;
+  height: inherit;
+}
+/* line 18, ../sass/_footer.scss */
+.main-footer table tbody tr td {
+  line-height: 25px;
+  width: 33%;
+  height: inherit;
+}
+/* line 22, ../sass/_footer.scss */
+.main-footer table tbody tr .host-name {
+  padding-left: 1%;
+  text-align: left;
+}
+/* line 25, ../sass/_footer.scss */
+.main-footer table tbody tr .host-name img {
+  vertical-align: middle;
+}
+/* line 29, ../sass/_footer.scss */
+.main-footer table tbody tr .copy-right {
+  text-align: center;
+}
+/* line 32, ../sass/_footer.scss */
+.main-footer table tbody tr .time {
+  text-align: right;
+  padding-right: 1%;
+}
+
+/* line 10, ../sass/_leftMenu.scss */
+#left-body {
+  width: 100%;
+  height: inherit;
+  color: #989dac;
+  background-color: #2B303E;
+  min-width: 180px;
+  overflow-y: auto;
+}
+/* line 16, ../sass/_leftMenu.scss */
+#left-body .left-menu #left-menu-header {
+  width: 100%;
+  height: 30px;
+  color: #e6e6bd;
+  background-color: #2B303E;
+  border-top: 1px solid #767A83;
+  z-index: 6;
+  line-height: 30px;
+  position: fixed;
+  padding-left: 23px;
+}
+/* line 24, ../sass/_leftMenu.scss */
+#left-body .left-menu #left-menu-header i {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+}
+/* line 30, ../sass/_leftMenu.scss */
+#left-body .left-menu #menu-content {
+  padding-top: 31px;
+}
+
+/* line 39, ../sass/_leftMenu.scss */
+#menu-content dl dd ul {
+  width: 100%;
+  height: inherit;
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+/* line 43, ../sass/_leftMenu.scss */
+#menu-content dl dd ul li {
+  color: inherit;
+  background-color: #2b2e37;
+}
+/* line 45, ../sass/_leftMenu.scss */
+#menu-content dl dd ul li:hover {
+  color: #fff;
+  background-color: #2299EE;
+  cursor: pointer;
+}
+/* line 50, ../sass/_leftMenu.scss */
+#menu-content dl dd ul li:before {
+  content: "";
+  position: absolute;
+  left: 27px;
+  border: 1px dashed #fff;
+}
+/* line 56, ../sass/_leftMenu.scss */
+#menu-content dl dd ul li a {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  line-height: 26px;
+  height: 26px;
+  width: 100%;
+  height: 26px;
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  text-indent: 45px;
+  font-size: 14px;
+}
+/* line 6, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_unstyled-link.scss */
+#menu-content dl dd ul li a:active, #menu-content dl dd ul li a:focus {
+  outline: none;
+}
+/* line 66, ../sass/_leftMenu.scss */
+#menu-content dl dd ul li.selected a {
+  color: #fff;
+}
+/* line 72, ../sass/_leftMenu.scss */
+#menu-content dl dt {
+  width: 100%;
+  height: inherit;
+  line-height: 28px;
+  height: 28px;
+  color: #989dac;
+  background-color: #2B303E;
+  cursor: pointer;
+  padding: 3px;
+  padding-left: 23px;
+  border-left: 3px solid #2B303E;
+}
+/* line 80, ../sass/_leftMenu.scss */
+#menu-content dl dt a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 100%;
+  height: inherit;
+}
+/* line 6, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_unstyled-link.scss */
+#menu-content dl dt a:active, #menu-content dl dt a:focus {
+  outline: none;
+}
+/* line 85, ../sass/_leftMenu.scss */
+#menu-content dl dt:hover {
+  color: #fff;
+  background-color: #3b3f4d;
+  border-color: #2299EE;
+  font-weight: normal;
+}
+
+/* line 10, ../sass/_right.scss */
+.tab-div {
+  width: 100%;
+  height: 30px;
+  float: right;
+  color: #231915;
+  background-color: #e2e2e2;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 14, ../sass/_right.scss */
+.tab-div li.active {
+  color: #231915;
+  background-color: #fff;
+}
+/* line 62, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.tab-div li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  float: left;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+/* line 49, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.tab-div li:first-child {
+  padding-left: 0;
+}
+/* line 50, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.tab-div li:last-child {
+  padding-right: 0;
+}
+/* line 52, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.tab-div li.last {
+  padding-right: 0;
+}
+/* line 18, ../sass/_right.scss */
+.tab-div li {
+  -moz-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px;
+  border-radius: 3px 3px 0 0;
+  margin-left: 10px;
+  line-height: 25px;
+  height: 25px;
+  margin-top: 5px;
+}
+/* line 23, ../sass/_right.scss */
+.tab-div li a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  cursor: pointer;
+  padding: 0 15px;
+  font-size: 13px;
+  font-weight: bold;
+}
+/* line 6, D:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_unstyled-link.scss */
+.tab-div li a:active, .tab-div li a:focus {
+  outline: none;
+}
+
+/* line 34, ../sass/_right.scss */
+.hidden_class, .hide {
+  display: none;
+}
+
+/* line 37, ../sass/_right.scss */
+.right-content {
+  width: 100%;
+  height: 680px;
+  position: absolute;
+  top: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  float: right;
+  color: #000;
+  background-color: #fff;
+}
+
+/* line 31, ../sass/maincss.scss */
+body {
+  overflow: hidden;
+  font-family: "微软雅黑", sans-serif;
+}
+
+/* line 38, ../sass/maincss.scss */
 #bottomFrame {
   background-color: #2b2e37;
+}
+
+/* line 45, ../sass/maincss.scss */
+#leftFrame {
+  width: 180px;
+  height: 100%;
+  float: left;
+  @set_color ($left-menu-font,#fff);
+}
+
+/* line 51, ../sass/maincss.scss */
+#rightFrame {
+  width: 2000px;
+  height: 100%;
+  float: right;
+  @set_color ($lp-table-font-color,#fff);
 }
