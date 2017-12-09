@@ -1,0 +1,18 @@
+解决push.default is unset
+warning: push.default is unset; its implicit value is changing in  
+Git 2.0 from 'matching' to 'simple'. To squelch this message  
+and maintain the current behavior after the default changes, use:  
+  
+  git config --global push.default matching  
+  
+To squelch this message and adopt the new behavior now, use:  
+  
+  git config --global push.default simple  
+
+  经百度后，得知‘matching’ 参数是 Git 1.x 的默认行为，其意是如果你执行 git push 但没有指定分支，它将 push 所有你本地的分支到远程仓库中对应匹配的分支。而 Git 2.x 默认的是 simple，意味着执行 git push 没有指定分支时，只有当前分支会被 push 到你使用 git pull 获取的代码。
+
+ 根据提示，修改git push的行为:
+[html] view plain copy
+git config --global push.default matching  
+
+再次执行git push 得到解决。
