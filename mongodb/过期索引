@@ -1,0 +1,11 @@
+过期索引
+db.local_2.ensureIndex({time:1},{expireAfterSeconds:30})
+db.local_2.insert({time:new Date()})  //将当前时间插入到 time 中
+db.local_2.find()
+
+1、存储在过期索引字段的值必须是指定的时间类型
+  说明：必须是ISOData或者ISOData数组，不能使用时间戳，否则不能自动删除
+db.local_2.insert({time:1})  //不能被自动删除
+2、如果指定的是ISOData数组，则按照数组中最小的数值计算删除
+3、过期索引不能是复合索引
+4、删除时间不是精确

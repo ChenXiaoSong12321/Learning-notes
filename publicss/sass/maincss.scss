@@ -46,6 +46,9 @@ body {
 	@include set_size(180px,100%);
 	@include float(left);
 	@set_color($left-menu-font,#fff);
+	@media(min-width:768px){
+         display: none;
+    }
 }
 
 #rightFrame {

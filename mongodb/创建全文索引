@@ -1,0 +1,4 @@
+创建全文索引
+db.articles.ensureIndex({key:"text"})//单值索引的 V 是 1或者 -1代表正向或者你向，而全文索引则是固定的字符串
+db.articles.ensureIndex({key1:"text",key2:"text",key3:"text"})//多字段
+db.articles.ensureIndex({"$**":"text"}) //多集合的所有字段创建大的全文索引

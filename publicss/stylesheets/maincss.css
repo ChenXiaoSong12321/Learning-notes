@@ -616,8 +616,14 @@ body {
   float: left;
   @set_color ($left-menu-font,#fff);
 }
+@media (min-width: 768px) {
+  /* line 45, ../sass/maincss.scss */
+  #leftFrame {
+    display: none;
+  }
+}
 
-/* line 51, ../sass/maincss.scss */
+/* line 54, ../sass/maincss.scss */
 #rightFrame {
   width: 2000px;
   height: 100%;
