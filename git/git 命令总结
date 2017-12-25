@@ -57,3 +57,5 @@ git命令中中文解决：
 
 
 版本回退到指定版本  git reset --hard 3628164
+
+本地分支切换 git checkout 版本号
