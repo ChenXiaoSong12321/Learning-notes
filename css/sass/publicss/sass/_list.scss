@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+@import "compass/typography";
+@import "compass/css3";
+@import "compass/layout";
+@import "variables","mixin";
+
+.list {
+	@include set_size(100%,auto);
+    margin: 0px auto;
+    border:2px solid #e2e2e2;
+    background-color:#fefefe;
+    .container-main-body{
+    	@include set_size(100%,auto);
+        max-height:1000px;
+    }
+}
+
+.rule-list{
+    @include set_size(100%,auto);
+    border-collapse: collapse;
+    table-layout: fixed;
+    thead{
+        @include set_size(100%,auto);
+        @include set_color($right-header-title,$lp-table-thead-bg-color);
+        tr{
+            @include set_size(100%,27px);
+            border:1px solid $lp-table-inner-border;
+            font-weight:bold;
+            td{
+                text-align:center;
+                @include ellipsis();
+            }
+        }
+    }
+    tbody{
+        @include set_size(100%,auto);
+        tr{
+            @include set_size(100%);
+            @include line-height(32px);
+            border:1px solid $lp-table-inner-border;
+            text-indent:5px;
+        }
+        tr.even-num-line{
+            @include set_color($lp-table-font-color,$lp-table-even-color);
+        }
+        tr.odd-num-line{
+            @include set_color($lp-table-font-color,$lp-table-odd-color);
+        }
+    }
+    td{
+        @include force-wrap();
+        input{
+            @include hover();
+        }
+    }
+    td.text-hidden{
+        @include ellipsis();
+        word-break: break-word;
+    }
+}
+.list-panel-title{
+    @include set_size(100%,25px);
+    @include set_color(#073662,#fefefe);
+    @include set_font(13px);
+    text-indent: 10px;
+
+    min-height: 30px;
+    line-height: 30px;
+    img{
+        vertical-align: middle;
+        margin-right: 6px;
+        margin-top: -2px;
+    }
+}
+.rule-listbc {
+    width: 50px;
+    text-indent: 0px;
+    text-align: center;
+}
+.toolbar {
+	@include set_size();
+    background-color: #fefefe;
+    padding:8px 0;
+    .opt-tools{
+    	@include float(left);
+        margin-left: 13px;
+    	// margin: 4px 10px;
+    }
+    .search, .paging-tools {
+    	@include float(right);
+	    // margin: 5px 10px;
+	    vertical-align: middle;
+        
+	}
+	@include pie-clearfix();
+}
+.toolbar-paging-tools{
+    @include set_color($right-header-title,$lp-table-thead-bg-color);
+    .paging-tools{
+        margin-right:5px;
+        img{
+            margin:auto 8px;
+            @include hover();
+        }
+        #first_page_icon_for_list_panel{
+            vertical-align: sub;
+        }
+        >span{
+            margin:auto 6px;
+        }
+        .paging-text{
+            span{
+                margin:auto 2px;
+            }
+            #current_page_for_list_panel{
+                padding: 2px;
+                width: 44px;
+                margin: auto 6px;
+            }
+        }
+    }
+}
+.imaged-button {
+	@include set_color(#fff,#5BC0DE);
+    @include hover();
+    min-width: 78px;
+    margin:auto 8px;
+    padding: 6px 10px;
+    border:none!important;
+    @include border-radius(2px);
+    img{
+    	vertical-align: text-top;
+        margin-right:4px;
+    }
+}
+button {
+	@include hover();
+    vertical-align: middle;
+    min-width: 40px;
+    padding:3px auto;
+    margin-left: 5px;
+}
+.search{
+	.search-item {
+	    margin-right:5px;
+	    .search-key-input {
+	    	@include set_size(196px);
+            padding:6px;
+		    font-size: 12px;
+            vertical-align: middle;
+		}
+		.search-button {
+
+		    .button-image {
+                padding: 2px 0;
+		    	@include set_size(12px,12px);
+			}
+			.button-text {
+			    height: 10px;
+			    font-size: 13px;
+			    margin-left: 3px;
+			}
+		}
+	}
+}
+
+.align-center {
+    text-align: center !important;
+    text-indent: 0 !important;
+}
+.rule-listbc {
+    width: 50px;
+    text-indent: 0px;
+    text-align: center;
+}
+.action-image {
+    // @include set_size(17px);
+    margin:auto 5px;
+}
+.mesg-box-s {
+    width: 40%;
+    max-height: 370px;
+}
+.close-button {
+    @include appearance(none);
+    @include float(right);
+    @include set_size(30px,30px);
+    @include set_font(20px);
+    @include hover();
+    @include set_color(#231915,inherit);
+    border:none;
+}
+.background-hovered{
+    background-color: powderblue!important;
+}
+.background-checked{
+    background-color: antiquewhite!important;
+}
+
+.control_stretch_table {
+    display: inline-block;
+    height: 25px;
+    float: right;
+    cursor: col-resize;
+    border: 1px solid rgba(0,0,0,0);
+    box-sizing: border-box;
+}

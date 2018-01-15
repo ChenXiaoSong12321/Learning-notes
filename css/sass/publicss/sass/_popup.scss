@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+@import "compass/typography";
+@import "compass/css3";
+@import "compass/layout";
+@import "variables";
+@import "mixin";
+
+@import "icons";
+
+.popup-tip {
+    @include border-radius(7px);
+    @include set_color(#515151,#6BC6E2);
+    @include hover();
+    position: absolute;
+    min-width:200px;
+    text-align: left;
+    z-index: 9999;
+    font-size: 13px;
+    display: none;
+    .cont{
+        height: auto;
+        background-color: #6BC6E2;
+        padding: 6px;
+        margin: 0;
+        margin-left: 10px;
+        @include border-radius(7px);
+        li{
+            line-height: 20px;
+            max-width: 210px;
+            word-break: break-word;
+            padding-left: 70px;
+            color:#fff;
+        }
+    }
+    .out,.in{
+        display: block;
+        font-family: simsun;
+        font-size: 0;
+        overflow: visible;
+        @include stretch($offset-top: 7px, $offset-left: -8px);
+        @include set_size(0px,0px);
+        border-style: solid dashed dashed;
+    }
+    .in{
+        border-color: transparent #6BC6E2 transparent transparent;
+        border-width: 8px 12px 8px 0px;
+        top: 8px;
+        left: -11px;
+    }
+    .tip-title,.error-title{
+        @include inline-block();
+        @include set_font(#333);
+        width: 70px;
+        margin-left: -70px;
+        display: inline-block;
+    }
+    .popup-check{
+        display: none;
+        .error-info{
+            color: red;
+        }
+    }
+}
+
+.popup-img-class{
+    vertical-align: top;
+    margin: 3px;
+    width: auto!important;
+    @include hover();
+}
+

@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+@import "compass/typography";
+@import "compass/css3";
+@import "compass/layout";
+@import "variables","mixin","icons";
+
+.all-mesg-box{
+	text-align: center;
+	.mesg-box{
+		@include set_size(30%);
+	    margin: 10px auto;
+	    padding: 10px 90px;
+	    background-color: #FFF;
+	    text-align: center;
+	    border: 1px solid #53A4EA; 
+	    @include set_font(14px);
+	    color:#666768;
+	    img{
+		    	@include set_size(32px,32px);
+			    vertical-align: middle;
+		    }
+	    .mesg-box-main {
+		    width: 100%;
+		    margin-bottom: 10px;	    
+		}
+		.mesg-box-foot{
+			@include set_size();
+			margin-top: 15px;
+		}
+	}
+}
+.mesg-box{
+	display:none;
+}
+#pop-apply-div{
+	@include set_size(30%*0.96);
+    margin: 15px auto;
+    padding: 10px 90px;
+    background-color: #FFF;
+    text-align: center;
+    border: 1px solid #53A4EA; 
+    @include set_font(14px);
+    color:#666768;
+	img{
+    	@include set_size(32px,32px);
+	    vertical-align: middle;
+    }
+	span:first-child{
+		width: 100%;
+	    margin-bottom: 10px;
+	}
+	span#cancel{
+		@include set_size();
+		margin-top: 15px;
+		display:block;
+	}
+}
+.net_button {
+	@include hover();
+	@include set_color(#fff,#5BC0DE);
+	
+	margin: 0px 15px;
+    padding: 6px 5px;
+    min-width: 90px;
+    border:none;
+}
+
+.popup-short-mesg-box-body {
+	@include stretch($offset-top: 44%,$offset-left: 50%);
+    @include set_size(240px,150px);
+    margin-left:-120px;
+    margin-top:-75px;
+    background-color: #FFFFFF;
+    border: none;
+    text-align: center;
+    z-index: 65535!important;
+}
+
+.popup-short-mesg-text-area {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: 90px;
+    background-color: #FFFFFF;
+    border: none;
+}
+.popup-short-mesg-text {
+    font-size: 13px;
+    line-height: 25px;
+    padding: 35px 5px;
+}
+.popup-short-mesg-note-mesg {
+    color: #000000;
+}
+.popup-short-mesg-alert-mesg{
+	color:red;
+}
+.popup-short-mesg-buttons {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: #F2F2F2;
+    border: solid 1px #B4B4B4;
+    border: none;
+}
+.popup-short-mesg-button {
+	@extend .net_button;
+	margin-top:16px;
+}
+.popup-short-mesg-box-cover {
+    z-index: 65534!important;
+}

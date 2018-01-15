@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+@import "compass/typography";
+@import "compass/css3";
+@import "compass/layout";
+@import "variables","mixin";
+
+// left.cgi
+
+#left-body {
+	@include set_size(100%);
+	@include set_color($left-menu-font,$left-menu-bg-color);
+	@include scroll();
+    min-width: 180px;
+    overflow-y: auto;
+    .left-menu{
+    	#left-menu-header{
+    		@include set_size(100%,30px);
+    		@include set_color($left-menu-header-font-color);
+    		border-top:1px solid #767A83;
+			z-index: 6;
+		    line-height: 30px;
+		    position: fixed;
+		    padding-left:27px;
+		    i{
+		    	@include set_size(20px,20px);
+				@include inline-block();
+    			vertical-align: baseline;
+		    }
+    	}
+    	#menu-content{
+			padding-top:31px;
+			// font-weight:bold;
+    	}
+    }
+}
+
+#menu-content{
+	dl{
+		
+		dd{
+			ul{
+				@include set_size();
+				@include no-bullet();
+				li{
+					@include set_color(inherit,$left-menu-se-bg-color);
+					&:hover{
+						@include set_color(#fff,$left-menu-blue);
+						@include hover();
+					}
+					a{
+						@include inline-block();
+						@include line-height(30px);
+						@include set_size(100%,30px);
+						@include unstyled-link();
+						text-indent:45px;
+					    font-size: 13px;
+					}
+				}
+				.selected{
+
+					a{
+						// color:$left-menu-se-font-color;
+						@include set_font($left-menu-se-font-color);
+						&:before{
+							content:" ";
+							@include set_size(0px,0px);
+							// @include border-radius(50%);
+							@include inline-block();
+							border-width: 5px 3px 5px 7px;
+						    border-style: solid;
+							border-color:transparent transparent transparent $left-menu-blue;
+							margin:-2px 4px auto -18px;
+							// background-color:$left-menu-blue;
+						}
+					}
+				}
+			}
+		}
+		dt{
+			@include set_size(100%);
+			@include line-height(28px);
+			color:$left-menu-font;
+			// @include set_color($left-menu-font);
+			@include hover();
+			padding: 6px;
+			font-size:14px;
+			padding-left:23px;
+			border-left:3px solid $left-menu-bg-color;
+			a{
+				@include unstyled-link();
+				@include inline-block();
+				@include set_size();
+			}
+			&.sele_fir_menu,&:hover{
+				@include set_color($fir-hover-font-color,$left-menu-hover);
+				border-color:$left-menu-blue;
+				font-weight:bold;
+			}
+		}
+	}
+}
+
+.carat{
+    position: absolute;
+    border: 5px solid transparent;
+    border-left: 6px solid $carat;
+    z-index: 1;
+    margin-left: 125px;
+    margin-top: 11px;
+    @include transition(color 0.3s);
+}
+
+.carat_open{
+    position: absolute;
+    border: 5px solid transparent;
+    border-left: 6px solid $carat;
+    z-index: 1;
+    margin-left: 125px;
+    margin-top: 11px;
+    @include transform-origin(20% 30%);
+    @include transform(rotate(90deg));
+    @include transition(color 0.3s);
+}
+
+dt a:hover .carat,
+dt a:hover .carat_open,
+dt a:focus .carat,
+dt a:focus .carat_open {
+    border-left: 6px solid $carat-hover;
+}

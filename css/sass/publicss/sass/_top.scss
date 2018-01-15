@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+@import "compass/typography";
+@import "compass/css3";
+@import "compass/layout";
+@import "variables","mixin";
+
+// top.cgi样式
+
+.header {
+	@include set_size(100%,70px);
+	@include set_color($top-font-color,$top-bg-color);
+	min-width:950px;
+	a.logo{
+		@include float(left);
+	}
+	div.header-right{
+		@include float(right);
+		@include set_size(51%);
+		min-width:600px;
+		@media(max-width:768px){
+	        display: none;
+	    }
+	}
+}
+
+a.logo{
+	@include inline-block();
+	@include unstyled-link();
+	@include hover();
+	margin:{
+		left:12px;
+		top:7px;
+	}
+	img{
+		vertical-align:middle;
+		@include float();
+	}
+	#CH_logo_title{
+		@include float();
+		margin:{
+			left:-8px;
+			top:10px;
+		}
+		font:{
+			size:28px;
+			family: $font-hwkt;
+		}
+	}
+}
+
+#alarm_controller{
+	@include float(left);
+	span{
+		@include set_size(50px,60px);
+		@include inline-block();
+		// @include other-sprite("warnning_lamp");
+		margin-top:8px;
+	}
+	img{
+		@include hover();
+	}
+}
+
+.help-div{
+	@include float(right);
+	// @include set_size(80%);
+	line-height:58px;
+	margin-right:17px;
+	.kwicks{
+		@include horizontal-list(10px);
+		li{
+			form{
+				@include hover();
+				span{
+					span{
+						font-size:12px;
+						vertical-align: middle;
+					}
+					.icon-wrap{
+						@include inline-block();
+						@include set_size(24px,24px);
+						@include set_color($top-bg-color,#fff);
+						@include border-radius(50%);
+						position: relative;
+						font-weight:bold;	
+						text-align: center;
+						i{
+							@include stretch($offset-top: -16px, $offset-left: 0px);
+							font-size:13px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.font-awesome-circle{
+	font-size:15px!important;
+	.font-awesome-inner{
+		color:$top-bg-color;
+		font-size:18px!important;
+	}
+}

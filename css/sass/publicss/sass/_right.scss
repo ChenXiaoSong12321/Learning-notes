@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+@import "compass/typography";
+@import "compass/css3";
+@import "compass/layout";
+@import "variables","mixin","icons";
+
+// right-tab
+
+.tab-div {
+	@include set_size(100%,31px);
+	@include float(right);
+	@include set_color($right-header-title,$right-header-bg-color);
+	li.active {
+		@include set_color($right-header-title,$lp-bg-color);
+	}
+	@include horizontal-list(0px);
+	li{
+		@include border-radius(3px 3px 0 0);
+		margin-left:10px;
+		@include line-height(26px);
+		margin-top:5px;
+		a{
+			@include unstyled-link();
+			@include hover();
+			padding:0 15px;
+			@include set_font(12px);
+		}
+	}
+}
+
+// right-content
+.hidden_class,.hide {
+    display:none; 
+}
+.right-content {
+	@include set_size(100%,680px);
+	@include stretch(31px);
+	@include float(right);
+	@include set_color(#000,#fff);
+	@include scroll();
+	overflow:auto;
+}
+.container {
+    width: 96%;
+    margin: 15px auto;
+}
+#module-content23 {
+	@include float(right);
+	@include set_size(98%);
+	@include scroll();
+    padding: 10px 1%;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+
+#add-div,.containter-div {
+	@include set_size(96%);
+	border:2px solid #e2e2e2;
+    margin: 15px auto;
+    padding: 0px;
+}
+
+#add-div-header,.containter-div-header{
+	@include inline-block();
+	@include set_size(100%);
+	@include set_color(#073662,#f2f2f2);
+    @include set_font(13px);
+    text-indent: 10px;
+    padding:3px 0;
+    span{
+    	margin-top:6px!important;
+    }
+    img{
+    	vertical-align: middle;
+		margin-right: 3px;
+		margin-top: -1px;
+    }
+}
+
+#add-div-content,.containter-div-content{
+	@include set_size();
+	table {
+	    @include set_size();
+	    border-collapse: collapse;
+	    font-size: 13px;
+	    background-color:#fefefe;
+	    tr{
+	    	border-bottom:1px solid #eeeeee;
+	    }
+	}
+}
+.table-footer {
+	@include set_color(#192027,#f2f2f2);
+    td{
+    	text-align:center;
+    	padding: 5px;
+    }
+}
+.add-div-footer{
+	background-color:#f2f2f2;
+}
+.add-div-type {
+	@include set_color(#595957,#fefefe);
+	@include set_size(150px);
+    text-indent: 15px;
+    font-weight: bold;
+    border: 1px solid #eee;
+}
+.env,.odd {
+    text-indent: 5px;
+    line-height:30px;
+    td{
+	    padding: 5px;
+    }
+}
+.net_button,.imaged-button {
+	@include set_color(#fff,#5BC0DE);
+	@include hover();
+    min-width: 80px;
+    margin:1px 5px;
+    padding: 4px 6px;
+    border:none;
+    @include border-radius(2px);
+    img{
+    	vertical-align: text-top;
+        margin-right:4px;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+.right-waiting{
+	@include set_size(100%,100%);
+    background-color: #fff;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+	.right-pic{
+		@include stretch($offset-top: -150px, $offset-left: 0);
+		@include set_size(100px,100px);
+	    margin: auto;
+	}
+}
+
+@include keyframes( lds-spinner) {
+  0% {
+    @include opacity(1);
+  }
+  100% {
+    @include opacity(0);
+  }
+}
+
+.lds-spinner {
+  position: relative;
+  @include set_size(100px !important,100px !important);
+  @include transform(translate(-50px, -50px) scale(0.5) translate(50px, 50px));
+  div{
+    @include stretch($offset-top: 48px,$offset-left: 94px);
+    @include animation(lds-spinner linear 1s infinite);
+    background-color: #666;
+    @include set_size(12px,30px);
+    @include border-radius(30%);
+    @include transform-origin($origin-x:6px, $origin-y: 52px);
+  }
+}
+$count:12;
+@for $i from 1 through $count {
+  $deg : 360deg/$count * ($i - 1); 
+  $sec : (1s - $i/$count);
+  .lds-spinner div:nth-child(#{$i}){
+    @include transform(rotate($deg));
+    @include animation-delay($sec);
+  }
+}

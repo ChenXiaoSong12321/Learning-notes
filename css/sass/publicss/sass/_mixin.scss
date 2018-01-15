@@ -1,0 +1,91 @@
+@charset "utf-8";
+@import "variables";
+
+
+@mixin set_size($width:100%,$height:inherit){
+  width:$width;
+  height:$height;
+}
+
+@mixin set_color($color:$top-font-color,$bg-color:$top-bg-color){
+  color:$color;
+  background-color:$bg-color;
+}
+
+@mixin set_panel($width:50%,$max-height:400px){
+  width:$width;
+  .add-panel{
+    max-height:$max-height;
+  }
+}
+
+@mixin hover($cursor:pointer){
+    cursor: $cursor;
+}
+
+@mixin line-height($line-height,$height:$line-height){
+    line-height:$line-height;
+    height:$line-height;
+}
+
+@mixin scroll($width:10px,$bg-color:$scroll_bg_color,$color:$scroll_color){
+  &::-webkit-scrollbar-track{
+    @include box-shadow(inset 0 0 6px rgba(0,0,0,0.3));
+    @include border-radius($width);
+    background-color: $bg-color;
+  }
+  &::-webkit-scrollbar{ 
+    width: $width;
+    background-color: $bg-color;
+  }
+  &::-webkit-scrollbar-thumb{
+    @include border-radius($width);
+    @include box-shadow(inset 0 0 6px rgba(0,0,0,0.3));
+    background-color: $color;
+  }
+}
+
+@mixin set_font($size:13px,$weight:bold){
+  font:{
+    size:$size;
+    weight:$weight;
+  }
+}
+@mixin col-6(){
+  width:50%;
+  float:left;
+}
+
+@mixin col($width:50%){
+  width:$width;
+  float:left;
+}
+
+@mixin col-sm($width:50%){
+ @media(min-width:768px){
+   width:$width;
+   float:left;
+ }
+}
+
+@mixin col-sm($width:50%){
+   @if type-of($width)!=number{
+        @error "$width必须是一个数值类型，你输入的width是： #{$width}";
+    }
+
+    @if not unitless($width){
+    //sass的内置函数，判断输入的数值是否有单位
+        @if unit($width) != "%"{
+          @error "$width必须是一个百分值，你输入的width是： #{$width}";
+        }
+  }@else{
+        @warn "$width应该是一个百分值，你输入的width是: #{$width}.";
+        $width:(percentage($width)/100);
+    
+        
+    }
+    @media(min-width:768px){
+          width:$width;
+          float:left;
+        }
+}

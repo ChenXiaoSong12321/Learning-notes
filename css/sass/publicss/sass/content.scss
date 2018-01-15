@@ -1,0 +1,499 @@
+@charset "utf-8";
+
+@import "compass/typography";
+@import "compass/css3";
+@import "compass/layout";
+@import "variables","mixin";
+
+
+table.list {
+	width: 100%;
+	margin: 0;
+	margin-top: 0px;
+	border: 1px solid #bfbfbf;
+	border-top: 0px;
+	padding: 7px;
+}
+
+div.error {
+	margin: 0;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-top: 0px;
+	padding: 10px;
+}
+
+img.error {
+        margin-right: 40px;
+}
+
+div.warning {
+	margin: 0;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-top: 0px;
+	padding: 10px;
+}
+
+img.warning {
+        margin-right: 40px;
+}
+
+h3.error {
+	background: url(../images/box-back.png);
+}
+h3.warning {
+	background: url(../images/box-back.png);
+}
+h3.note {
+	background: url(../images/box-back.png);
+}
+
+div.note {
+	margin: 0;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-top: 0px;
+	padding: 10px;
+}
+img.note {
+        margin-right: 40px;
+}
+
+table tr.header {
+	background-image: url(../images/table-header.png);
+	background-repeat: no-repeat;
+	background-color: #e6e6e6;
+}
+
+table.list tr.header td {
+	font-size: 10px;
+	padding: 0px;
+	margin: 0;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;		
+}
+
+table.list tr.oodd {
+    background: #fafafa;
+	padding: 0;
+	margin: 0;
+}
+
+table.list tr.even {
+    background: #f0f0f0;
+	margin: 0;
+}
+
+table.list tr td {
+	padding: 4px 4px 4px 2px;
+	margin: 0;
+}
+
+table.list td.top-no-padding {
+    padding-top: 0px;
+}
+
+.selected {
+	text-indent:5px;
+    background-color: #ffff00;
+}
+.selected   td{
+	border:0px;
+	border-bottom:1px solid #999;
+	padding:5px;
+	border-right:1px solid #999;
+}
+
+
+#page-content a.info { text-decoration: none; color: #579903; }
+#page-content a.info:hover { text-decoration: none; color: #000000; }
+
+#page-content a {
+    text-decoration: underline;
+    color: #579903;
+}
+
+#page-content a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #ccc;
+}
+
+.border-top {
+	border-top: 1px solid #ccc;
+}
+
+.green {
+    color: #339933;
+}
+
+.red {
+    color: #993333;
+}
+
+.orange {
+    color: #FF9933;
+}
+
+.greens {
+    color: #339933;
+}
+
+.reds {
+    color: #993333;
+}
+
+.oranges {
+    color: #FF9933;
+}
+
+
+.yellow {
+    color: #FFFF00;
+}
+
+.blue {
+    color: #333399;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.cb {
+    clear: both;
+}
+
+.hidden {
+    display: none;
+}
+
+table.ruleslist {
+	@include set_size(96%);
+	border:2px solid #e2e2e2;
+	margin:0px auto;
+	border-collapse: collapse;
+    table-layout: fixed;
+    tr{
+    	@include line-height(25px);
+        border-bottom: 1px solid #eeeeee;
+    }
+    td,th{
+		text-align: left;
+    }
+    td{
+    	text-indent:10px;
+		@include ellipsis();
+    }
+    td.boldbase,table.ruleslist tr th{
+    	@include set_color(#192027,#f2f2f2);
+ 		font-weight:bold;
+		text-align:center;
+    }
+}
+.table_note td div {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ba7b0e;
+    margin: 0px auto;
+    text-align: center;
+    img{
+        width: 25px;
+        height: 25px;
+        margin-bottom: -6px;
+    }
+}
+table.ruleslist td.actions {
+	min-width: 160px;
+}
+
+table.ruleslist td.actions input {
+/*	border: none;*/
+	float: left;
+	padding : 0;
+	margin : 0;
+	padding-left: 4px;
+	height: 16px;
+	width: 16px;
+}
+
+table.ruleslist td.actions a {
+/*	border: none;*/
+	float: none;
+	padding : 0;
+	margin : 0;
+	padding-left: 4px;
+	height: 16px;
+	width: 16px;
+}
+
+
+table.list table.ruleslist tr td {
+    padding-left: 5px;
+}
+
+img.clear {
+/*	border: none;*/
+    float: left;
+	padding : 0;
+	margin : 0;
+	padding-left: 4px;
+	height: 16px;
+	width: 16px;
+}
+
+div.box {
+    padding-bottom: 20px;
+}
+
+div.boxvalue {
+    
+}
+
+div.submit {
+    padding: 0px 0px 0px 0px;
+    text-align: left;
+}
+
+div.boxsubmit {
+    border-top: 1px solid #cccccc;
+    padding: 10px 0px 0px 8px;
+    text-align: left;
+}
+
+div.editortitle {
+    border-bottom: 1px solid #cccccc;
+    padding: 0px 0px 10px 0px;
+    text-align: left;
+}
+
+div.editoradd {
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    background: url(/images/editoradd.png) no-repeat;
+    padding-left: 20px;
+    line-height: 16px;
+}
+
+div.editorbox {
+    text-align: left;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #CCCCCC;
+    background-color: #f0f0f0;
+}
+
+div.ediorerror {
+    text-align: left;
+}
+
+div.editorsubmit {
+    border-top: 1px solid #cccccc;
+    padding: 10px 0px 0px 0px;
+    text-align: left;
+}
+
+/* Form layout styles */
+input.checkbox { margin: 0px; padding: 0px; margin-right: 4px; }
+
+.form-field, .multi-form-field { float:left; padding-right: 4px; }
+.form-field input, .form-field select, .multi-form-field input, .multi-form-field select { display: block; margin: 0px; margin-top: 4px; }
+.form-field input, .form-field select { width: 370px; }
+.multi-form-field input, .multi-form-field select { width: 180px; }
+input.checkbox { margin: 0px; margin-top: 4px; padding: 0px; }
+label { font-weight: bold; }
+#network-register td { padding: 4px 4px 4px 0px; }
+td.section-title { padding: 4px 4px 0px 0px; }
+td.title p.form-section-title { font-size: 12px; font-weight: normal; padding: 0px; margin: 0px; padding-top: 8px; padding-bottom: 4px; }
+.form-section-title.first { padding-top: 0px; }
+label.error-msg { font-weight: normal; padding-top: 3px; color: red; font-size: 10px; display: block; clear: both; }
+.divider { border-top: #AAAAAA 1px dotted; margin: 0px; padding: 0px; padding-bottom: 4px; }
+.form-field.error, .multi-form-field.error { color: red; }
+
+div.save-button { float: left; width: 680px; margin-top: 3px; border-top: #dddddd 1px solid; padding-top: 6px; padding-right: 24px; padding-bottom: 16px; }
+
+/* Styles for the ajaxed service switch (on/off) */
+.service-switch { padding: 0px; margin: 0px;}
+.service-switch .title { line-height: 17px; font-size: 14px; margin-bottom:5px;}
+.service-switch .image { padding-left: 6px; }
+.service-switch div.save-button { padding-top: 6px; }
+.service-switch .content { }
+.service-switch .content .description { margin-top: 19px; background-color: #eeeeee; border: #dddddd 1px solid; padding: 4px; width: 500px; }
+/* Style the spinner text */
+.service-switch .content .working { margin-top: 18px; }
+/* Spinner layout styles */
+.spinner { 
+    display: none;
+    background: url(/images/indicator.gif) no-repeat 0px 0px;
+    line-height: 16px; 
+    margin: 0px; padding: 0px;
+    padding-left: 24px;
+}
+.service-switch .content .options-container { margin-top: 11px; }
+.service-switch .content .options-container div.title { padding: 4px 4px 0px 0px; }
+.service-switch .content .options-container div.divider { border-top: #AAAAAA 1px dotted; margin: 0px; padding: 0px; padding-bottom: 0px; }
+.service-switch .content .options-container div.options { }
+.service-switch .enable-uplinks { padding-top: 10px; }
+.service-switch .enable-uplinks span { padding-right: 10px; }
+/* Vertical-align only applies to checkboxes - needed only for firefox to align label and checkbox */
+.service-switch .enable-uplinks input { padding: 0px; margin: 0px; margin-left: 10px; vertical-align: bottom; margin-right: 4px; }
+.service-switch .enable-uplinks select { margin-left: 4px; }
+
+/* styles for remote.cgi */
+.service-switch-image { padding-left: 6px; }
+.switch-options { margin-top: 0px; }
+
+#ssh-options, #ssh-hold { padding-top: 10px; }
+#ssh-hold { margin-top: 7px; }
+p.form-section-title { font-size: 12px; font-weight: normal; padding: 0px; margin: 0px; padding-bottom: 4px; }
+div.title { padding: 4px 4px 0px 0px; }
+.divider { border-top: #AAAAAA 1px dotted; margin: 0px; padding: 0px; padding-bottom: 0px; }
+#ssh-description { margin-top: 17px; background-color: #eeeeee; border: #dddddd 1px solid; padding: 4px; width: 500px;}
+table.list tr td, table.ruleslist tr th { padding:4px 4px 4px 0px; }
+
+/* Styles for enaccess.cgi */
+/*#access-policy-hold { margin-top: 27px; }
+#access-policy { margin-top: 0px; }
+p.form-section-title { font-size: 12px; font-weight: normal; padding: 0px; margin: 0px; padding-bottom: 4px; }
+div.title { padding: 4px 4px 0px 0px; }
+.divider { border-top: #AAAAAA 1px dotted; margin: 0px; padding: 0px; padding-bottom: 0px; }
+#access-description { }
+.cb-caption { padding-left: 6px; }  
+/*
+
+/* Styles for EFW Forms */
+.efw-form { }
+.efw-form .section { margin-bottom: 0px; }
+.efw-form .section.first { margin-top: 0px; }
+.efw-form .section div.title { border-bottom: #AAAAAA 1px dotted; margin: 0px; padding: 0px; margin-bottom: 12px; }
+.efw-form .section div.title h2.title { font-size: 12px; font-weight: normal; padding: 0px; margin: 0px; padding-top: 8px; padding-bottom: 4px; }
+.efw-form .section .fields-row { padding-bottom: 10px; }
+.efw-form .section .fields-row .multi-field, .efw-form .section .fields-row .field { float:left; padding-right: 4px; }
+.efw-form .section .fields-row .multi-field input, .efw-form .section .fields-row .multi-field select,
+.efw-form .section .fields-row .field input, .efw-form .section .fields-row .field select, .efw-form .section .fields-row .field .value, .efw-form .section .fields-row .field textarea { display: block; margin: 0px; margin-top: 4px; }
+.efw-form .section .fields-row .multi-field input, .efw-form .section .fields-row .multi-field select { width: 180px; }
+.efw-form .section .fields-row .field input, .efw-form .section .fields-row .field select, .efw-form .section .fields-row .field textarea { width: 372px; }
+.efw-form .section .fields-row .field.checkbox input, .efw-form .section .fields-row .multi-field.checkbox input { display: inline; width: inherit; }
+.efw-form .section .fields-row .field.checkbox label, .efw-form .section .fields-row .multi-field.checkbox label { font-weight: normal; padding-left: 4px; }
+.efw-form .field.checkbox input, .efw-form .multi-field.checkbox input { margin: 0px; padding: 0px; }
+.efw-form .section .field.submit input, .efw-form .section .multi-field.submit input { width: inherit; }
+/* Styles for multi column form sections, meaning that more than one column is next to the other */
+.efw-form .section.multi-column { float: left; padding-right: 24px; }
+/*.form-field, .multi-form-field { float:left; padding-right: 4px; }
+.form-field input, .form-field select, .multi-form-field input, .multi-form-field select { display: block; margin: 0px; margin-top: 4px; }
+.form-field input, .form-field select { width: 370px; }
+.multi-form-field input, .multi-form-field select { width: 180px; }
+*/
+/* If the form is used within an editorbox the padding around the
+ * title is removed
+ */
+ 
+.editorbox .efw-form .section div.title h2.title {
+    padding-top: 0px;
+}
+
+/* Legend to a list should show a space of 6px to the list above */
+
+.list-legend{
+width:96%;
+margin:0px auto;
+}
+
+.list-legend tr{
+background-color:#f2f2f2;
+line-height:25px;
+height:25px;
+}
+
+
+.list-legend tr td{
+text-indent:20px;
+}
+
+.list-legend tr td img{
+margin:0px 5px -3px 5px;
+}
+
+
+.inline {
+    display: inline;
+}
+table.list table.ruleslist tr td.center, table.list table.ruleslist tr th.center {
+    text-align: center;
+}
+
+.important { 
+    background: url(/images/bubble.png) transparent no-repeat;
+    padding: 10px;
+    height: 93px;
+    width: 486px;
+}
+
+.important .content {
+    color: #ffffff;
+    font-size: 13px;
+    margin-top: 9px;
+    padding-left: 100px;
+    padding-right: 10px;
+    text-align: left;
+}
+
+.error-fancy .content, .notification-fancy .content { }
+.error-fancy .content .sign {margin-top:10px;padding-top:5px;}
+.error-fancy .content .text, .notification-fancy .content .text {margin-top:10px;line-height: 25px; font-size: 14px; }
+
+
+.error-fancy{
+margin:10px auto;
+padding:10px;
+width:50%;
+height:20%;
+background-color:#FFF;
+border:3px solid #f8622e;
+text-align:center;
+}
+
+ .notification-fancy {
+margin:10px auto;
+padding:10px;
+width:50%;
+height:20%;
+background-color:#FFF;
+border:3px solid #fcb214;
+text-align:center;
+}
+.notification-fancy .content {}
+.notification-fancy .bottom {}
+.notification { 
+    background: url(/images/bubble_yellow.png) transparent no-repeat;
+    padding: 10px;
+    height: 93px;
+    width: 486px;
+}
+
+.notification .content {
+    color: #ffffff;
+    font-size: 13px;
+    margin-top: 9px;
+    padding-left: 80px;
+    padding-right: 10px;
+    text-align: left;
+}
+
+.service-switch-form{
+width:96%;
+margin:10px auto;
+border:1px solid #999;
+background-color:#ebf5f7;
+padding:5px;
+
+}
+
+.bold{
+font-weight:bold;
+}

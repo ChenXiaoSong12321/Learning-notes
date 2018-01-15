@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+@import "compass/typography";
+@import "compass/css3";
+@import "compass/layout";
+@import "variables";
+
+@import "mixin";
+
+@import "popup";
+
+table {
+    font-size: 13px;
+}
+
+.popup-mesg-box-cover,.open-dialog__overlay {
+    @include set_size(100%, 100%);
+
+    display: block;
+
+    @include stretch($offset-top: 0, $offset-left: 0);
+
+    position: fixed;
+    z-index: 50;
+    background: #000;
+
+    @include opacity(0.5);
+}
+.popup-mesg-box-body {
+    @include stretch($offset-top: 44%,$offset-left: 50%,$offset-bottom: auto);
+    @include set_size(100%,max-content);
+    border:8px solid rgba(#333,0.2);
+    min-width: 450px;
+    z-index: 60;
+    .list{
+        border:none;
+        background-color:#fefefe;
+    }
+}
+
+.add-panel {
+    @include set_size(100%, auto);
+}
+
+.add-panel-header {
+    @include set_size(100%, 30px);
+    @include line-height(30px);
+    @include set_color(#192027, #f2f2f2);
+    @include set_font(13px);
+
+    padding:5px 0;
+}
+
+.add-panel-title {
+    @include float(left);
+    margin-left: 10px;
+    display: inline;
+
+    img {
+        @include float(left);
+
+        display: block;
+        margin: 7px 0px -7px 5px;
+    }
+
+    .add-panel-title-text {
+        @include set_font(14px);
+
+        color: #231915;
+    }
+}
+.add-panel-close-button {
+    @include float(right);
+    @include set_size(20px);
+    @include set_font(18px, normal);
+    @include hover;
+
+    &:after {
+        content: "x";
+    }
+}
+
+
+
+.add-panel-content {
+    width: 100%;
+    background-color: #fefefe;
+}
+
+.container-main-body {
+    @include set_size;
+    background-color:#fefefe;
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @include scroll;
+    @include set_size;
+
+    table {
+        @include set_size;
+
+        font-size: 13px;
+        background-color: #fefefe;
+
+        tr {
+            border: 1px solid #eeeeee;
+        }
+    }
+
+    tr {
+        @include line-height(30px, 25px);
+        @include force-wrap;
+
+        text-indent: 5px;
+
+        .add-panel-subtitle {
+            text-indent: 15px;
+            padding:8px 0px;
+            width: 15%;
+            min-width: 140px;
+            border-right: 1px solid #eeeeee;
+        }
+
+        .add-panel-section {
+            width: 85%;
+            text-indent: 0px;
+            padding: 5px 5px;
+            input,textarea,select{
+                border:1px solid #c1c1c1;
+                padding:5px;
+            }
+        }
+    }
+}
+
+.add-panel-form-text {
+    @include set_size(196px);
+    
+    padding: 1px;
+    text-indent: 1px;
+}
+.add-panel-form-select{
+    @include set_size(196px);
+}
+
+.add-panel-form-item {
+    @include inline-block;
+    
+    margin: 5px;
+}
+.add-panel-form-text,.add-panel-form-textarea{
+    font-family:$font-wryh;
+}
+.add-panel-footer {
+    @include set_color(#fff, #f2f2f2);
+
+    padding: 8px 0;
+    text-align: center;
+
+    input {
+        @include set_color(#fff, #5BC0DE);
+        @include hover;
+
+        min-width: 80px;
+        margin: auto 20px;
+        padding: 5px 6px;
+        border: none;
+    }
+}
+
+.add-panel-form-button {
+    @extend .imaged-button;
+    min-width:70px;
+    // height:24px;
+}
+.add_panel_header_move{
+    @include hover(move);
+}
+.waggle-swing{
+    @include animation(wobble 1s .2s ease both);
+}
+
+@include keyframes(wobble){
+    0%{-webkit-transform:translateX(0%)}
+    15%{-webkit-transform:translateX(-25%) rotate(-5deg)}
+    30%{-webkit-transform:translateX(20%) rotate(3deg)}
+    45%{-webkit-transform:translateX(-15%) rotate(-3deg)}
+    60%{-webkit-transform:translateX(10%) rotate(2deg)}
+    75%{-webkit-transform:translateX(-5%) rotate(-1deg)}
+    100%{-webkit-transform:translateX(0%)}
+}
+
+.required-star{
+    margin-left: 3px;
+    vertical-align: middle;
+    color: red;
+}
+.container-main-body-m {
+    max-height: 300px!important;
+}
+.container-main-body-s {
+    max-height: 300px!important;
+}
+.mesg-box-m {
+    @include set_panel(50%,450px);
+}
+.mesg-box-s {
+    @include set_panel(40%,370px);
+}

@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * variables .....................变量
+ * 
+ * TOOLS
+ *
+ * COMPONENTS
+ * reset .........................重置样式
+ * 
+ * BUSINESS
+ *
+ * BASE
+ * 
+ */
+
+@import "variables","mixin";
+@import "list","add";
+
+.disabled{
+	@include hover(not-allowed!important);
+}
