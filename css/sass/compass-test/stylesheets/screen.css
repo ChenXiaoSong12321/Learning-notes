@@ -41,6 +41,31 @@ tables：统一table相关的table、td、th等标签的样式
 /* 提供页面中的页脚部分始终处于最底部的能力 */
 /* 用于拉伸填满整个父容器的能力 */
 /* (使用绝对定位 )*/
+/* line 10, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 12, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+#my-root {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -30px;
+}
+/* line 18, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+#my-root #my-root-footer {
+  height: 30px;
+}
+
+/* line 20, E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+#my-footer {
+  clear: both;
+  position: relative;
+  height: 30px;
+}
+
 /* line 79, ../sass/screen.scss */
 a {
   color: #00c;

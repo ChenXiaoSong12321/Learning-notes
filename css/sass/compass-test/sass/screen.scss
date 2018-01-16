@@ -48,7 +48,7 @@ tables：统一table相关的table、td、th等标签的样式
 /* 定高，定宽，或者自适应的背景 */
 // @import "compass/layout/grid-background";
 /* 提供页面中的页脚部分始终处于最底部的能力 */
-// @import "compass/layout/sticky-footer";
+@import "compass/layout/sticky-footer";
 /* 用于拉伸填满整个父容器的能力 */
 // @import "compass/layout/stretching";
 /* (使用绝对定位 )*/
@@ -57,7 +57,7 @@ tables：统一table相关的table、td、th等标签的样式
 // div#my-root
 	// div#my-root-footer
 // div#my-footer
-// @include sticky-footer(30px,"#my-root","#my-root-footer","#my-footer");
+@include sticky-footer(30px,"#my-root","#my-root-footer","#my-footer");
 
 @import "compass/css3";
 // $supported-browers:chrome;
