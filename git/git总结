@@ -1,0 +1,105 @@
+git总结
+
+概念
+	git
+		工具，版本控制
+	github
+		网站，社交平台，开源项目，远程仓库
+
+图解
+	svn与git区别
+		集成式
+		分布式
+		github作用
+
+	github官网
+		https://github.com
+
+git工具
+	不同系统，方式不同
+	windows
+		官网下载
+	可视化
+		命令行(推荐)
+
+建立一个库
+	drag
+		git  clone  [url]
+	设置贡献者
+		name
+		email
+		git config --global  user.name
+		git config --global user.email
+		git config --list
+	查看所有配置项
+
+git的三个区
+	工作区
+	暂存区
+		作为过渡层
+		避免误操作
+		保护工作区和版本区
+		分支处理
+	版本区（库）
+Git命令
+	git status
+	git add
+		name
+		.
+	git commit
+		-m
+		-a -m  等同于git add . + git commit
+
+Git命令
+	对比
+		git diff 比较工作区和暂存区
+		git diff --cached(--staged)
+		git diff master
+	撤销
+		git reset HEAD <file.name>
+		git checkout -- <file.name>
+		git commit --amend 合并之前commit
+	删除
+		git rm <file.name>
+		git rm -f <file.name> 删除暂存区和工作区
+		git rm --cached <file.name> 保留工作区删除暂存区
+	恢复
+		git checkout commit_id <file.name>
+		git reset --hard commit_id
+		HEAD^
+		HEAD~<num>
+		git reflog
+	同步到远程仓库
+		git remote
+		-v
+		origin
+		git push origin master
+	多人协作解决冲突
+		git fetch
+		Git diff master origin/master
+		Git merge  orgin/master
+		git pull
+	开源项目协作
+		fork
+		pull request
+	Git分支
+		git branch
+		-d
+		--merged
+		--no-merged
+		git checkout
+		-b
+		git merge
+	github上的分支
+		git push 
+		github上直接创建
+
+		github上的标签
+		git tag
+		github上直接创建
+	创建组织
+		github上创建
+	创建博客
+		github上创建
+		https://pages.github.com/
+		注意格式的正确性
