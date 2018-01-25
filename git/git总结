@@ -70,32 +70,32 @@ Git命令
 		HEAD~<num>
 		git reflog
 	同步到远程仓库
-		git remote
+		git remote 查看远端服务器名字
 		-v
 		origin
 		git push origin master
 	多人协作解决冲突
-		git fetch
-		Git diff master origin/master
-		Git merge  orgin/master
-		git pull
+		git fetch 从远端仓库拉取代码，不合并
+			Git diff master origin/master 比对
+			Git merge  orgin/master 合并
+		git pull 从远端仓库拉取代码，自动合并
 	开源项目协作
-		fork
+		fork 
 		pull request
 	Git分支
 		git branch
-		-d
-		--merged
-		--no-merged
+			-d 删除已合并分支，删除未合并分支使用-D
+			--merged 查看当前分支已合并分支
+			--no-merged
 		git checkout
 		-b
-		git merge
+		git merge 合并
 	github上的分支
 		git push 
 		github上直接创建
 
 		github上的标签
-		git tag
+		git tag  github上的release (git push origin v1.0)
 		github上直接创建
 	创建组织
 		github上创建
