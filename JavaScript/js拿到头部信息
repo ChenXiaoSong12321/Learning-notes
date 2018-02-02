@@ -1,0 +1,11 @@
+js拿到头部信息
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", window.location.pathname + window.location.search, true);
+xhr.send();
+xhr.onreadystatechange = function() {
+  if(this.readyState == this.HEADERS_RECEIVED) {
+    console.log(xhr.getAllResponseHeaders());
+  }
+}
+
