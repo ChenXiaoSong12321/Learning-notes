@@ -53,7 +53,7 @@ git 命令总结
 	创建SSH Key : ssh-keygen -t rsa -C "youremail@example.com"(没有特定需求可一路回车，id_rsa(私钥)和id_rsa.pub(公钥)，将公钥粘贴到Add SSH Key的key中)
 	
 git命令中中文解决：
-	git config –global core.quotepath false
+	git config --global core.quotepath false
 
 
 版本回退到指定版本  git reset --hard 3628164
