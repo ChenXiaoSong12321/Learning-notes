@@ -1,0 +1,22 @@
+css效果
+
+1、如何用一个div画XXX
+box-shadow无限投影，::before,::after
+
+2、如何产生不占空间的边框
+box-shadow、outline、box-sizing
+
+3、如何实现ios图标的圆角
+clip-path（SVG）
+
+4、如何实现半圆、扇形等图形
+border-radius组合：有无边框、边框粗细、圆角半径
+
+5、如何实现背景图居中显示/不重复/改变大小
+background-position、background-repeat、background-size（cover、contain）
+
+6、如何平移/放大一个元素
+transform:translateX(100px)、transform:scale(2)
+
+7、如何实现3D效果
+prespective:500px;transform-style:preserve-3d;transform:translate rotate...
