@@ -1,0 +1,27 @@
+git提交时如何忽略一些文件
+
+
+touch .gitignore
+
+使用.gitignore文件的方式很简单，只需要在文件里输入你想忽略的文件的规则就可以了，下面举个例子。
+
+比如我的项目想忽略掉node_modules这个文件夹，直接输入：
+
+node_modules/
+就可以了，再次commit的时候就会忽略掉这个文件夹。
+如果想忽略一个文件比如忽略oauth.json，再输入：
+
+oauth.json
+node_modules/
+这样就可以了。
+如果想忽略掉所有的后缀为json的文件，那么就输入：
+
+*.json
+oauth.json
+node_modules/
+那么这样所有的.json的文件就会被全部忽略，git就不会扫描和提交这些文件了。
+
+作者：ppmoon
+链接：http://www.jianshu.com/p/ade52455c3a4
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
