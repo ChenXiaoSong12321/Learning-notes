@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transform</title>
+	<style>
+		.container{
+			display: block;
+			width: 100px;
+			height: 100px;
+			background: red;
+			margin-bottom: 10px;
+		}
+		.transition1{
+			transition: all 1s;
+			transition-timing-function: ease-in-out;
+		}
+		.transition1:hover{
+			background: green;
+			width: 600px;
+		}	
+		.transition2:hover{
+			animation: run 1s linear;
+			animation-iteration-count: infinite;
+			/*animation-play-state: paused;*/
+			/*animation-fill-mode: forwards;*/
+		}
+		@keyframes run {
+			0%{
+				width: 100px;
+			}
+			50%{
+				width: 600px;
+			}
+			100%{
+				width: 100px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container transition1"></div>
+	<div class="container transition2"></div>
+</body>
+</html>
