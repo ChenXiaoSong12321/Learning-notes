@@ -56,3 +56,19 @@ gulp.task('watch', ()=> {
 			.pipe(gulp.dest(paths.distDir))
 	})
 })
+
+gulp.task('hello',()=>{
+	console.log(`hello world`)
+})
+
+import sass from 'gulp-sass'
+gulp.task('sass',()=>{
+	gulp.src('sass/**/*.scss')
+		.pipe(sass({outputStyle:'compressed'})
+			.on('error',sass.logError))
+		.pipe(gulp.dest('sass/css'))
+})
+
+gulp.task('watchSass',()=>{
+	gulp.watch('sass/**/*.scss',['sass'])
+})
