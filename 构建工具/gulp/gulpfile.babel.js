@@ -72,3 +72,20 @@ gulp.task('sass',()=>{
 gulp.task('watchSass',()=>{
 	gulp.watch('sass/**/*.scss',['sass'])
 })
+
+import autoprefixer from 'autoprefixer'
+import cssnano from 'cssnano'
+import atImport from 'postcss-import'
+import postcss from 'gulp-postcss'
+
+gulp.task('postcss',()=>{
+	gulp.src('css/**/*.css')
+		.pipe(postcss([
+			atImport,
+			autoprefixer({
+				browsers:['>0%']
+			}),
+			cssnano
+		]))
+		.pipe(gulp.dest('css/postcss'))
+})
