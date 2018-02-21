@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<style>
+		.layout div{
+			height: 100px;
+		}
+		.layout.float .left{
+			float: left;
+			width: 300px;
+		}
+		.layout.float .right{
+			float: right;
+			width: 300px;
+		}
+		.layout::after{
+			content:' ';
+			clear:both;
+			display: table;
+		}
+		.p-layout div{
+			position: absolute;
+			height: 100px;
+		}
+		.p-left{
+			left: 0;
+			width: 300px;
+		}
+		.p-right{
+			right: 0;
+			width: 300px;
+		}
+		.p-center{
+			left: 300px;
+			right: 300px;
+		}
+		.f-layout div{
+			height: 100px;
+		}
+		.f-left{
+			width: 300px;
+		}
+		.f-right{
+			width: 300px;
+		}
+		.f-center{
+			flex: 1;
+		}
+		.t-layout div{
+			height: 100px;
+			display: table-cell;
+		}
+		.t-left{
+			width: 300px;
+		}
+		.t-right{
+			width: 300px;
+		}
+		.t-center{
+		}
+		.g-layout .left-right-center{
+			display: grid;
+			width: 100%;
+			grid-template-rows: 100px;
+			grid-template-columns: 300px auto 300px;
+		}
+	</style>
+</head>
+<body>
+	<section class="layout float">
+		<article class="left-right-center">
+			<div class="left" style="background-color: red"></div>
+			<div class="right" style="background-color: red"></div> 
+			<div class="center" style="background-color: blue">
+				<h1>浮动布局</h1>
+			</div>
+		</article>
+	</section>
+	<section class="p-layout float" style="position: relative;margin-top: 10px;">
+		<article class="left-right-center">
+			<div class="p-left" style="background-color: red;"></div>
+			<div class="p-right" style="background-color: red"></div> 
+			<div class="p-center" style="background-color: blue">
+				<h1>浮动布局</h1>
+			</div>
+		</article>
+	</section>
+	<section class="f-layout float" style="margin-top: 120px;">
+		<article class="left-right-center" style="display: flex;">
+			<div class="f-left" style="background-color: red;"></div>
+			<div class="f-center" style="background-color: blue">
+				<h1>浮动布局</h1>
+			</div>
+			<div class="f-right" style="background-color: red"></div> 
+		</article>
+	</section>
+	<section class="t-layout float" style="margin-top: 10px;">
+		<article class="left-right-center" style="display: table;width: 100%">
+			<div class="t-left" style="background-color: red;"></div>
+			<div class="t-center" style="background-color: blue">
+				<h1>浮动布局</h1>
+			</div>
+			<div class="t-right" style="background-color: red"></div> 
+		</article>
+	</section>
+	<section class="g-layout float" style="margin-top: 10px;">
+		<article class="left-right-center" style="width: 100%">
+			<div class="g-left" style="background-color: red;"></div>
+			<div class="g-center" style="background-color: blue">
+				<h1>浮动布局</h1>
+			</div>
+			<div class="g-right" style="background-color: red"></div> 
+		</article>
+	</section>
+</body>
+</html>
