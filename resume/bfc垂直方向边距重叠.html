@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bfc的应用</title>
+</head>
+<body>
+	<section id="margin">
+		<style>
+			#margin{
+				background-color: pink;
+			}
+			#margin p{
+				margin: 5px auto 25px;
+				background-color: red;
+			}
+		</style>
+		<p>1</p>
+		<!-- 外层的div创建的一个bfc -->
+		<div style="overflow: hidden;">
+			<p>2</p>
+		</div>
+		<p>3</p>
+	</section>
+	<!-- bfc不与float重叠 -->
+	<section id="layout">
+		<style>
+			#layout{
+				background-color: red;
+				margin-top: 10px;
+			}
+			#layout .left{
+				float: left;
+				width: 100px;
+				height: 100px;
+				background-color: pink
+			}
+			#layout .right{
+				height: 110px;
+				background-color: #ccc	;
+				overflow: auto;
+			}
+		</style>
+		<div class="left"></div>
+		<div class="right"></div>
+	</section>
+	
+	<!-- bfc子元素即使是float也会参与高度计算 -->
+	<section id="float">
+		<style>
+			#float{
+				background-color: red;
+				margin-top: 10px;
+				/*overflow: auto;*/
+				float: left
+			}
+			#float .float{
+				float: left;
+				font-size: 30px;
+			}
+		</style>
+		<div class="float">
+			浮动元素
+		</div>
+	</section>
+</body>
+</html>

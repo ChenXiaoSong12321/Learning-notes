@@ -1,0 +1,16 @@
+css盒模型
+
+1、box-sizing
+content-box标准盒模型，content的宽高
+border-box IE盒模型，border往里算
+
+2.js获取盒模型的宽高
+dom.style.width/height
+dom内联元素设置的宽高
+dom.currentStyle.width/height
+ie获取元样式
+window.getComputedStyle(dom).width/height
+火狐和谷歌获取样式
+dom.getBoundingClientRect().width/height
+个获取html元素相对于视窗的位置集合
+
