@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>event</title>
+</head>
+<body>
+	<style>
+		.event{
+			display: inline-block;
+			background-color: red;
+			width: 200px;
+			height: 50px;
+		}
+	</style>
+	<div class="event"></div>
+	<script>
+		// 捕获的流程
+		window.addEventListener('click',function () {
+			console.log('window captrue')
+		},true)
+		document.addEventListener('click',function () {
+			console.log('document captrue')
+		},true)
+		document.documentElement.addEventListener('click',function () {
+			console.log('heml captrue')
+		},true)
+		document.body.addEventListener('click',function () {
+			console.log('body captrue')
+		},true)
+		document.querySelector(".event").addEventListener('click',function () {
+			console.log('ele captrue')
+		},true)
+
+		// 冒泡的流程
+		window.addEventListener('click',function () {
+			console.log('window propagation')
+		})
+		document.addEventListener('click',function () {
+			console.log('document propagation')
+		})
+		document.documentElement.addEventListener('click',function () {
+			console.log('heml propagation')
+		})
+		document.body.addEventListener('click',function () {
+			console.log('body propagation')
+		})
+		document.querySelector(".event").addEventListener('click',function () {
+			console.log('ele propagation')
+		})
+
+		var eve = new Event('custom')
+		ev.addEventListener('custom',function(){
+			console.log('custom')
+		})
+		ev.dispatchEvent(eve)
+	</script>
+</body>
+</html>
