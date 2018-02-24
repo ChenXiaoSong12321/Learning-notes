@@ -1,0 +1,39 @@
+原型链
+
+创建对象的集中方式
+
+// 1；字面量
+var o1 = {name:'o1'}
+var o2 = new Object({name:'o2'})
+
+// 2:通过构造函数
+var M = function(name){this.name= name}
+var o3 = new M('o3')
+
+// 3：Object.create
+var p = {name:'p'}
+var o4 = Object.create(p) 
+
+原型、构造函数、实例、原型链
+o3.__proto__ === M.prototype
+将构造函数的显式原型赋给了实例的隐式原型
+M.prototype.constructor === M
+原型对象的constructor指向了构造函数
+
+instanceof原理
+instanceof 检测一个对象A是不是另一个对象B的实例的原理是：查看对象B的prototype指向的对象是否在对象A的[[prototype]]链上。如果在，则返回true,如果不在则返回false。不过有一个特殊的情况，当对象B的prototype为null将会报错(类似于空指针异常)。
+o3 instanceof M
+true
+o3 instanceof Object
+true
+所以判断一个实例是不是一个构造函数的实例，最好用constructor
+o3.__proto__.constructor === M
+true
+o3.__proto__.constructor === Object
+false
+
+
+new运算符
+1、一个新对象被创建，它继承自foo.prototype
+2、构造函数foo被执行。执行的时候，相应的传参会传入，同时上下文（this）会被指定为这个新实例。new foo等同于new foo()，只能用在不传递任何参数的情况
+3、如果构造函数返回了一个对象“对象”，那么这个对象会取代整个new出来的结果。如果构造函数没有返回对象，那么new出来的结果为步骤1创建饿对象

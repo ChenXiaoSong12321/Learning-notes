@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型链</title>
+</head>
+<body>	
+	<script>
+		// 1；字面量
+		var o1 = {name:'o1'}
+		var o2 = new Object({name:'o2'})
+
+		// 2:通过构造函数
+		var M = function(name){this.name= name}
+		var o3 = new M('o3')
+
+		// 3：Object.create
+		var p = {name:'p'}
+		var o4 = Object.create(p)
+		// o4.__proto__ === p
+
+		var new2 = function(f){
+			var o = Object.create(f.prototype)
+			var k = f.call(o)
+			if (typeof k === 'object') {
+				return k
+			}else{
+				return o
+			}
+		}
+	</script>
+</body>
+</html>
