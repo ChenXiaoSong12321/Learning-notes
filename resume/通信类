@@ -1,0 +1,26 @@
+通信类
+
+什么是同源策略及限制
+同domain（或ip）,同端口，同协议视为同一个域，一个域内的脚本仅仅具有本域内的权限，可以理解为本域脚本只能读写本域内的资源，而无法访问其它域的资源。这种安全限制称为同源策略。 
+cookie、localstorage和indexDB无法读取
+DOM无法获得
+AJAX请求不能发送
+
+前后端如何通信
+ajax 遵守同源策略
+WebSocket 不受同源策略的限制
+CORS 支持跨域通信也支持同源通信
+
+如何创建ajax
+XMLHttpRequest对象的工作流程
+兼容性
+事件的触发条件
+事件的触发顺序
+
+跨域通信的几种方式
+JSONP 利用script标签的异步加载来实现
+Hash utl地址#后面的东西，search后面的改变会刷新页面
+postMessage h5中的标准，跨域通信
+WebSocket 
+CORS 支持跨域通信的ajax
+
