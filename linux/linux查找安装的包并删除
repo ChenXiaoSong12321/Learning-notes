@@ -1,0 +1,2 @@
+ 1060  rpm -qa | grep node
+ 1061  yum remove nodejs* node-gyp-0.10.6-2.el6.noarch
