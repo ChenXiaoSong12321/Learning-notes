@@ -1,0 +1,33 @@
+页面性能
+
+提升页面性能的方法有哪些？
+1、资源压缩合并，减少HTTP请求
+2、非核心代码异步加载->异步加载的方式->异步加载的区别
+3、利用浏览器缓存->缓存的分类->缓存的原理
+4、使用CDN
+5、预解析DNS
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//host_name_to_prefetch.com">
+http的是a标签默认打开dns预解析
+https默认关闭dns预解析
+
+异步加载的方式
+1、动态脚本加载
+2、defer
+3、async
+异步加载的区别
+1、defer是在HTML解析完之后才会执行，如果是多个，按照加载的顺序依次执行
+2、async是在加载完之后立即执行，如果是多个，执行顺序和加载顺序无关
+
+
+浏览器缓存分类
+跟缓存相关的http头
+强缓存 直接可以用，不会再和服务器交流
+	Expires：绝对时间 服务器时间，有缺陷，服务器时间与客户端时间不一致
+	Cache-control：相对时间 距客户端上一次请求成功间隔的时间
+	如果同时存在，以Cache-control为准
+协商缓存 需要向服务器请求知道缓存是否还可以再用
+	last-Modified If-Modified-Since 
+	Etag
+	If-None-Match
+	last-Modified

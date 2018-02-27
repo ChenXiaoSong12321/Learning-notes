@@ -1,0 +1,15 @@
+js运行机制
+
+单线程、异步任务、同步队列
+单线程在同一时间只能做同一件事，异步任务要挂起，优先同步任务
+同步队列执行完成之前是不会执行异步任务的
+
+浏览器有个timer模块，专门处理setTimeout和setInterval的，会把时间记住，当时间到达时将需要执行的程序放到异步任务中
+
+
+任务队列和Event Loop（事件循环）
+
+异步任务
+setTimeout和setInterval
+DOM事件
+ES6中的Promise

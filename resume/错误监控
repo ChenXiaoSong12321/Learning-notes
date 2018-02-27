@@ -1,0 +1,16 @@
+错误监控
+
+前端错误的分类
+错误的捕获方式
+	即使运行错误：代码错误
+		捕获方式：try..catch、window.onerror
+	资源加载错误
+		object.onerror
+		performance.getEntries()
+		Error事件捕获
+
+
+上报错误的基本原理
+1、利用Ajax通信的方式上报
+2、利用Image对象上报
+(new Image()).src = 'http://baidu.com/tesjk?=r=fsdfg'
