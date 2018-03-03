@@ -7,6 +7,7 @@
 var obj = {}
 obj.__proto__ === Obeject.prototype
 
+javascript中的每个对象都有prototype属性，Javascript中对象的prototype属性的解释是：返回对象类型原型的引用。
 所有的函数，都有一个prototype属性（显示原型），属性值是一个普通的对象
 
 当试图得到一个对象的属性时，如果这个对象本身没有这个属性，那么会去它的__proto__(即它的构造函数的prototype)中去找

@@ -1,0 +1,12 @@
+消除input框的默认样式
+
+input, button, select, textarea {
+outline: none;
+-webkit-appearance: none;
+border-radius: 0;
+}
+
+outline: none;去掉chrome浏览器自带的点击input框出现边框情况
+-webkit-appearance: button;使元素标签看起来像个按钮样式，意思定义了按钮样式
+-webkit-appearance: none;去掉按钮样式
+border-radius: 0;去掉圆角
