@@ -1,0 +1,12 @@
+npm ERR cb() never called
+
+This workaround worked for me:
+	$ sudo npm cache clean
+
+My node and npm versions are:
+
+	$ node -v
+	v0.10.0
+
+	$ npm -v
+	1.2.14

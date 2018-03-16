@@ -1,0 +1,16 @@
+ npm报错：error code EINTEGRITY
+
+ 一、升级npm 
+npm i -g npm
+
+二、删除package-lock.json
+
+三、删除缓存目录下的所有数据 
+npm cache clean –force
+
+四、验证缓存数据的有效性和完整性，清理垃圾数据 
+npm cache verify
+
+五、包问题 
+包是在windows下发布的，在linux安装错误。 
+排查方法：看日志，去除相关的包配置，再安装测试
