@@ -1,0 +1,12 @@
+npm --save-dev --save 的区别
+
+npm install 在安装 npm 包时，有两种命令参数可以把它们的信息写入 package.json 文件，
+一个是npm install--save另一个是 npm install –save-dev，他们表面上的区别是
+--save 会把依赖包名称添加到 package.json 文件 dependencies 键下，
+--save-dev 则添加到 package.json 文件 devDependencies 键下
+
+
+
+dependencies是运行时依赖
+devDependencies是开发时的依赖
+“npm install –save-dev gulp-uglify ”命令安装，因为我们在发布后用不到它，而只是在我们开发才用到它
