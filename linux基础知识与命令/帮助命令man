@@ -1,0 +1,15 @@
+帮助命令man
+
+man 命令
+获取指定命令的帮助
+man ls
+
+查看命令拥有哪个级别的帮助
+man -f 命令
+相当于
+whatis 命令
+
+举例
+man -5 passwd
+man -4 null
+man -8 ifconfig

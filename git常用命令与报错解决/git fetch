@@ -1,0 +1,87 @@
+git fetch命令用于从另一个存储库下载对象和引用。
+
+使用语法
+
+git fetch [<options>] [<repository> [<refspec>…]]
+git fetch [<options>] <group>
+git fetch --multiple [<options>] [(<repository> | <group>)…]
+git fetch --all [<options>]
+
+描述
+
+从一个或多个其他存储库中获取分支和/或标签(统称为“引用”)以及完成其历史所必需的对象。 远程跟踪分支已更新(Git术语叫做commit)，需要将这些更新取回本地，这时就要用到git fetch命令。
+
+默认情况下，还会获取指向正在获取的历史记录的任何标签; 效果是获取指向您感兴趣的分支的标签。可以使用--tags或--no-tags选项或通过配置远程.<name>.tagOpt 来更改此默认行为。 通过使用显式提取标签的refspec，可以获取不指向您感兴趣的分支的标签。
+
+git fetch可以从单个命名的存储库或URL中获取，也可以从多个存储库中获取，如果给定了<group>，并且配置文件中有一个远程<group>条目。
+
+获取的参考名称以及它们所指向的对象名称被写入到.git/FETCH_HEAD中。 此信息可能由脚本或其他git命令使用，如git-pull。
+
+示例
+
+以下是一些示例 -
+
+1.更新远程跟踪分支
+
+$ git fetch origin
+Shell
+上述命令从远程refs/heads/命名空间复制所有分支，并将它们存储到本地的refs/remotes/ origin/命名空间中，除非使用分支.<name>.fetch选项来指定非默认的refspec。
+
+2.明确使用refspec
+
+$ git fetch origin +pu:pu maint:tmp
+Shell
+此更新(或根据需要创建)通过从远程存储库的分支(分别)pu和maint提取来分支本地存储库中的pu和tmp。
+
+即使没有快进，pu分支将被更新，因为它的前缀是加号; tmp不会。
+
+3.在远程分支上窥视，无需在本地存储库中配置远程
+
+$ git fetch git://git.kernel.org/pub/scm/git/git.git maint
+$ git log FETCH_HEAD
+Shell
+第一个命令从 git://git.kernel.org/pub/scm/git/git.git 从存储库中获取maint分支，第二个命令使用FETCH_HEAD来检查具有git-log的分支。
+
+4.将某个远程主机的更新
+
+
+ 
+$ git fetch <远程主机名>
+Shell
+要更新所有分支，命令可以简写为：
+
+$ git fetch
+Shell
+上面命令将某个远程主机的更新，全部取回本地。默认情况下，git fetch取回所有分支的更新。如果只想取回特定分支的更新，可以指定分支名,如下所示 -
+
+$ git fetch <远程主机名> <分支名>
+Shell
+比如，取回origin主机的master分支。
+
+$ git fetch origin master
+Shell
+所取回的更新，在本地主机上要用”远程主机名/分支名”的形式读取。比如origin主机的master分支，就可以用origin/master读取。
+
+git branch命令的-r选项，可以用来查看远程分支，-a选项查看所有分支。
+
+$ git branch -r
+origin/master
+
+$ git branch -a
+* master
+  remotes/origin/master
+Shell
+上面命令表示，本地主机的当前分支是master，远程分支是origin/master。
+
+取回远程主机的更新以后，可以在它的基础上，使用git checkout命令创建一个新的分支。
+
+$ git checkout -b newBrach origin/master
+上面命令表示，在origin/master的基础上，创建一个新分支:newBrach。
+
+此外，也可以使用git merge命令或者git rebase命令，在本地分支上合并远程分支。
+
+$ git merge origin/master
+# 或者
+$ git rebase origin/master
+Shell
+上面命令表示在当前分支上，合并origin/master
