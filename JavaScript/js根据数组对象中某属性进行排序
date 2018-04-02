@@ -1,0 +1,27 @@
+js根据数组对象中某属性进行排序
+
+
+//定义一个对象数组 
+　　　var data = [{ name: "jiang", age: 22 }, { name: "AAAAAAAAAAAAAA", age: 21 }, { name: "CCCCCCCCc", age: 25}]; 
+　　　//定义一个比较器 
+function compare(propertyName) { 
+    return function (object1, object2) { 
+        var value1 = object1[propertyName]; 
+        var value2 = object2[propertyName]; 
+        if (value2 < value1) { 
+            return -1; 
+        } 
+        else if (value2 > value1) { 
+            return 1; 
+        } 
+        else { 
+            return 0; 
+        } 
+    } 
+} 
+//使用方法 
+　　data.sort(compare("name")); 
+　　alert(data[0].name);//jiang 
+//使用方法 
+　　data.sort(compare("age")); 
+　　alert(data[0].age);//25s 
