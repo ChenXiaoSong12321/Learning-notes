@@ -1,0 +1,11 @@
+本地修改了一些文件，其中包含修改、新增、删除的，不需要了想要丢弃，于是做了git check -- .操作，但是只放弃了修改的文件，新增和删除的仍然没有恢复，于是百度了下，使用如下命令：
+
+git checkout . && git clean -df
+
+可以放弃所有修改、新增、删除文件
+
+git checkout . //放弃本地修改，没有提交的可以回到未修改前版本
+
+git clean是从工作目录中移除没有track的文件.
+通常的参数是git clean -df:
+-d表示同时移除目录,-f表示force,因为在git的配置文件中, clean.requireForce=true,如果不加-f,clean将会拒绝执行.
