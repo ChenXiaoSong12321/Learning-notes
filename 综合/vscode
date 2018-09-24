@@ -1,0 +1,28 @@
+// 将设置放入此文件中以覆盖默认设置
+{
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      {
+        "language": "html",
+        "autoFix": true
+      },
+      {
+        "language": "vue",
+        "autoFix": true
+      }
+    ],
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.syntaxProfiles": {
+      "vue-html": "html",
+      "vue": "html"
+    },
+    "workbench.iconTheme": "vscode-icons",
+     // By default, create file  username
+    "fileheader.Author": "Jerry.chenshisong",
+    // By default, update file  username.
+    "fileheader.LastModifiedBy": "Jerry.chenshisong",
+    "editor.tabSize": 2,
+    "vsicons.dontShowNewVersionMessage": true,
+  }
